@@ -1,17 +1,76 @@
+# aliases
+alias ll="ls -lhA"
+alias grep="grep --color=auto"
+
+# ls colors
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+# personal bins
+export PATH="$HOME"/bin:"$PATH"
+
+# anaconda path
+export PATH=/usr/local/anaconda3/bin:"$PATH"
+
 # Homebrew API Token
 export HOMEBREW_GITHUB_API_TOKEN="e821346d97162a5697a0ea981fd6712d84ce262e"
-
-# rustup
-#export PATH=$HOME/.cargo/bin:$PATH
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-# jenv
-## shims + autocomplete
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
+## PROMPT ##
+# check return value
+function nonzero_return() {
+	RETVAL=$?
+	[ $RETVAL -ne 0 ] && echo "$RETVAL"
+}
 
-# personal bins
-export PATH="$HOME"/bin:/usr/local/anaconda3/bin:"$PATH"
+# get current branch in git repo
+function parse_git_branch() {
+	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+	if [ ! "${BRANCH}" == "" ]
+	then
+		STAT=`parse_git_dirty`
+		echo "[${BRANCH}${STAT}]"
+	else
+		echo ""
+	fi
+}
 
+# get current status of git repo
+function parse_git_dirty {
+	status=`git status 2>&1 | tee`
+	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
+	untracked=`echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?"`
+	ahead=`echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?"`
+	newfile=`echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?"`
+	renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
+	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
+	bits=''
+	if [ "${renamed}" == "0" ]; then
+		bits=">${bits}"
+	fi
+	if [ "${ahead}" == "0" ]; then
+		bits="*${bits}"
+	fi
+	if [ "${newfile}" == "0" ]; then
+		bits="+${bits}"
+	fi
+	if [ "${untracked}" == "0" ]; then
+		bits="?${bits}"
+	fi
+	if [ "${deleted}" == "0" ]; then
+		bits="x${bits}"
+	fi
+	if [ "${dirty}" == "0" ]; then
+		bits="!${bits}"
+	fi
+	if [ ! "${bits}" == "" ]; then
+		echo " ${bits}"
+	else
+		echo ""
+	fi
+}
+
+export PS1="\[\e[36m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\]\[\e[36m\]:\[\e[m\]\[\e[33m\]\w\[\e[m\] \[\e[35m\]\`parse_git_branch\`\[\e[m\] \[\e[31m\]\`nonzero_return\`\[\e[m\]\n\[\e[35m\]>\[\e[m\] "
