@@ -9,8 +9,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # personal bins
 export PATH="$HOME"/bin:"$PATH"
 
-# anaconda path
-export PATH=/usr/local/anaconda3/bin:"$PATH"
+# Anaconda stuff
+. /usr/local/anaconda3/etc/profile.d/conda.sh
 
 # Homebrew API Token
 export HOMEBREW_GITHUB_API_TOKEN="e821346d97162a5697a0ea981fd6712d84ce262e"
@@ -20,10 +20,10 @@ export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
 ## PROMPT ##
-# check return value
+# return exit code if nonzero
 function nonzero_return() {
 	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "$RETVAL"
+	[ $RETVAL -ne 0 ] && echo "[$RETVAL] "
 }
 
 # get current branch in git repo
@@ -73,4 +73,4 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\[\e[36m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\]\[\e[36m\]:\[\e[m\]\[\e[33m\]\w\[\e[m\] \[\e[35m\]\`parse_git_branch\`\[\e[m\] \[\e[31m\]\`nonzero_return\`\[\e[m\]\n\[\e[35m\]>\[\e[m\] "
+export PS1="\[\e[36m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[36;40m\]\h\[\e[m\]\[\e[36m\]:\[\e[m\]\[\e[33m\]\w\[\e[m\]\[\e[31m\] \`nonzero_return\`\[\e[m\]\[\e[95m\]\`parse_git_branch\`\[\e[m\] \n\[\e[35m\]>\[\e[m\] "
