@@ -19,6 +19,9 @@ export HOMEBREW_GITHUB_API_TOKEN="e821346d97162a5697a0ea981fd6712d84ce262e"
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
+# OPAM configuration
+. /Users/dericp/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
 ## PROMPT ##
 # return exit code if nonzero
 function nonzero_return() {
