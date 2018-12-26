@@ -3,3 +3,5 @@ repository = ~/Dotfiles
 ignore = [
     '.git',
     '.gitignore']
+packages = [
+    'vim']
