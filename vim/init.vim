@@ -1,3 +1,7 @@
+" Change the leader key.
+nnoremap <SPACE> <Nop>
+let mapleader = "\<Space>"
+
 " Enable syntax highlighting.
 syntax enable
 
@@ -11,6 +15,15 @@ set expandtab
 " Enable line numbers.
 set number
 
+" Better keybindings for pane switching.
+nnoremap <Leader>j <C-W><C-J>
+nnoremap <Leader>k <C-W><C-K>
+nnoremap <Leader>l <C-W><C-L>
+nnoremap <Leader>h <C-W><C-H>
+
+" Clear search highlights quickly.
+nnoremap <Leader><space> :noh<cr>
+
 " Plugins
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
@@ -22,7 +35,7 @@ Plug 'ajh17/spacegray.vim'
 call plug#end()
 
 " Open NERDTree wih ctrl-n.
-map <C-n> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 " Open NERDTree when opening a directory.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
