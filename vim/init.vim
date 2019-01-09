@@ -2,6 +2,9 @@
 nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
 
+" Use jk to escape.
+:inoremap jk <Esc>
+
 " Enable syntax highlighting.
 syntax enable
 
@@ -29,7 +32,9 @@ nnoremap <Leader><space> :noh<cr>
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'ajh17/spacegray.vim'
+Plug 'morhetz/gruvbox'
+Plug 'lervag/vimtex'
+Plug 'vim-airline/vim-airline'
 
 " Initialize plugin system.
 call plug#end()
@@ -41,4 +46,5 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Color scheme.
-colorscheme spacegray
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
