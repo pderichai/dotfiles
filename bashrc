@@ -9,9 +9,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # personal bins
 export PATH="$HOME"/bin:"$PATH"
 
-# Anaconda stuff
+# setup Anaconda
 . /usr/local/anaconda3/etc/profile.d/conda.sh
-conda activate
 
 # Homebrew API Token
 export HOMEBREW_GITHUB_API_TOKEN="e821346d97162a5697a0ea981fd6712d84ce262e"
