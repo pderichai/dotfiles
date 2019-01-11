@@ -48,3 +48,4 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " Color scheme.
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+set background=dark
