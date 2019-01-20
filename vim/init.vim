@@ -15,6 +15,9 @@ set shiftwidth=4
 " Use spaces in tabs by default.
 set expandtab
 
+" File type specific tab widths.
+autocmd FileType tex setlocal tabstop=2 shiftwidth=2
+
 " Enable line numbers.
 set number
 
@@ -32,9 +35,10 @@ nnoremap <Leader><space> :noh<cr>
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
-Plug 'morhetz/gruvbox'
-Plug 'lervag/vimtex'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-syntastic/syntastic'
+Plug 'lervag/vimtex'
+Plug 'morhetz/gruvbox'
 
 " Initialize plugin system.
 call plug#end()
@@ -46,6 +50,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Color scheme.
+set background=dark
+let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
-set background=dark
