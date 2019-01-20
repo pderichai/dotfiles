@@ -2,6 +2,7 @@
 repository = ~/Dotfiles
 ignore = [
     '.git',
-    '.gitignore']
+    '.gitignore',
+    'tmux.terminfo']
 packages = [
     'vim']
