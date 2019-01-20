@@ -1,6 +1,6 @@
 " Python interpreter paths.
-let g:python_host_prog = '$HOME/anaconda3/envs/neovim2/bin/python'
-let g:python3_host_prog = '$HOME/anaconda3/envs/neovim3/bin/python'
+let g:python_host_prog = expand($HOME) . '/anaconda3/envs/neovim2/bin/python'
+let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
 
 " Change the leader key.
 nnoremap <SPACE> <Nop>
