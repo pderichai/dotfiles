@@ -1,3 +1,7 @@
+" Python interpreter paths.
+let g:python_host_prog = '$HOME/anaconda3/envs/neovim2/bin/python'
+let g:python3_host_prog = '$HOME/anaconda3/envs/neovim3/bin/python'
+
 " Change the leader key.
 nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
@@ -37,7 +41,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
-Plug 'lervag/vimtex'
 Plug 'morhetz/gruvbox'
 
 " Initialize plugin system.
