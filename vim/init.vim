@@ -40,6 +40,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
+Plug 'valloric/youcompleteme'
 Plug 'vim-syntastic/syntastic'
 Plug 'morhetz/gruvbox'
 
