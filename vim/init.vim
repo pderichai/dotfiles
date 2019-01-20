@@ -54,6 +54,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Color scheme.
+set termguicolors
 set background=dark
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
