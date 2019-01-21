@@ -7,7 +7,7 @@ nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
 
 " Use jk to escape.
-:inoremap jk <Esc>
+inoremap jk <Esc>
 
 " Enable syntax highlighting.
 syntax enable
@@ -41,7 +41,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 
 " Initialize plugin system.
