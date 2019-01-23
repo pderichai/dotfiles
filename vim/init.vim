@@ -1,59 +1,60 @@
-" Python interpreter paths.
+" python interpreter paths
 let g:python_host_prog = expand($HOME) . '/anaconda3/envs/neovim2/bin/python'
 let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
 
-" Change the leader key.
+" change the leader key
 nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
 
-" Use jk to escape.
+" enable mouse
+set mouse=a
+
+" use jk to escape
 inoremap jk <Esc>
 
-" Enable syntax highlighting.
+" enable syntax highlighting
 syntax enable
 
-" Default tab size set to 4.
+" default tab size set to 4
 set tabstop=4
-" Default shift size set to 4.
+" default shift size set to 4
 set shiftwidth=4
-" Use spaces in tabs by default.
+" use spaces in tabs by default
 set expandtab
 
-" File type specific tab widths.
+" file type specific tab widths
 autocmd FileType tex setlocal tabstop=2 shiftwidth=2
 
-" Enable line numbers.
+" enable line numbers
 set number
 
-" Better keybindings for pane switching.
+" better keybindings for pane switching
 nnoremap <Leader>j <C-W><C-J>
 nnoremap <Leader>k <C-W><C-K>
 nnoremap <Leader>l <C-W><C-L>
 nnoremap <Leader>h <C-W><C-H>
 
-" Clear search highlights quickly.
+" clear search highlights quickly
 nnoremap <Leader><space> :noh<cr>
 
-" Plugins
-" Specify a directory for plugins.
+" plugins
+" specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
 Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
 
-" Initialize plugin system.
+" initialize plugin system
 call plug#end()
 
-" Open NERDTree wih ctrl-n.
+" open NERDTree wih ctrl-n
 map <Leader>n :NERDTreeToggle<CR>
-" Open NERDTree when opening a directory.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
-" Color scheme.
+" color scheme
 set termguicolors
 set background=dark
 let g:gruvbox_italic = 1
