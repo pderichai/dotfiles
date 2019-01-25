@@ -9,6 +9,9 @@ let mapleader = "\<Space>"
 " enable mouse
 set mouse=a
 
+" draw vertical lines at 80 and 100
+set colorcolumn=80,100
+
 " use jk to escape
 inoremap jk <Esc>
 
