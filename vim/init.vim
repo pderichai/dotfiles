@@ -6,9 +6,6 @@ let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
 nnoremap <SPACE> <Nop>
 let mapleader = "\<Space>"
 
-" enable mouse
-set mouse=a
-
 " draw vertical lines at 80 and 100
 set colorcolumn=80,100
 
