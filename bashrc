@@ -24,7 +24,8 @@ if [ $? -eq 0 ]; then
 else
     if [ -f "/Users/dericp/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/Users/dericp/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+        # don't automatically activate the base environment
+        #CONDA_CHANGEPS1=false conda activate base
     else
         \export PATH="/Users/dericp/anaconda3/bin:$PATH"
     fi
