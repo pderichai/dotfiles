@@ -313,3 +313,8 @@ bind -r L resize-pane -R 5
 # when scrolling with mouse wheel, reduce number of scrolled rows per tick to 1
 bind -T copy-mode-vi WheelUpPane select-pane \; send-keys -X -N 1 scroll-up
 bind -T copy-mode-vi WheelDownPane select-pane \; send-keys -X -N 1 scroll-down
+
+# set C-a to the tmux prefix for nested sessions
+set -gu prefix2
+unbind C-a
+bind-key -n C-a send-prefix
