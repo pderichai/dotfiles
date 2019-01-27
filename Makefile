@@ -9,9 +9,7 @@ ubuntu: vim tmux
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
 
 vim:
-	pushd vim && \
-	make link && \
-	popd \
+	cd vim && make link
 
 tmux:
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
