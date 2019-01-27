@@ -1,8 +1,0 @@
-[dotfiles]
-repository = ~/Dotfiles
-ignore = [
-    '.git',
-    '.gitignore',
-    'tmux.terminfo']
-packages = [
-    'vim']
