@@ -1,3 +1,6 @@
+# vim editing mode
+set -o vi
+
 # aliases
 alias ll="ls -lhA"
 alias grep="grep --color=auto"
