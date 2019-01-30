@@ -42,6 +42,7 @@ nnoremap <Leader><space> :noh<cr>
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
@@ -52,9 +53,21 @@ Plug 'morhetz/gruvbox'
 " initialize plugin system
 call plug#end()
 
+" close NERDTree after opening a file
+let NERDTreeQuitOnOpen = 1
+" delete buffer when deleteing file
+let NERDTreeAutoDeleteBuffer = 1
+" make things prettier
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 " open NERDTree wih ctrl-n
 map <Leader>n :NERDTreeToggle<CR>
-" Open NERDTree when opening a directory.
+" close vim if the only window open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" open NERDTree when starting vim with no arguments
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" open NERDTree when opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
