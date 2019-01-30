@@ -1,19 +1,17 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: vim tmux gitconfig
+.PHONY: shared vim
 
-macos: vim tmux
+macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 
-ubuntu: vim tmux
+ubuntu: shared
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
 
 vim:
 	cd vim && make link
 
-tmux:
+shared:
+	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/tmux.conf.local" ~/.tmux.conf.local
-
-gitconfig:
-	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
