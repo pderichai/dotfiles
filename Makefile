@@ -11,7 +11,7 @@ ubuntu: shared
 vim:
 	cd vim && make link
 
-shared:
+shared: vim
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/tmux.conf.local" ~/.tmux.conf.local
