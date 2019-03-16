@@ -320,7 +320,7 @@ unbind C-a
 bind-key -n C-a send-prefix
 
 # navgiate between windows with n and p
-bind -r p previous-window # select previous window
-bind -r n next-window     # select next window
+bind p previous-window # select previous window
+bind n next-window     # select next window
 unbind C-h
 unbind C-l
