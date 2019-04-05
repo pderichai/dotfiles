@@ -125,3 +125,6 @@ export LD_LIBRARY_PATH=/usr/local/cuda-9.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 
 # Anaconda
 export PATH="$HOME/anaconda3/bin:$PATH"
+
+# Making PyTorch see GPUs in the same order as `nvidia-smi`.
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
