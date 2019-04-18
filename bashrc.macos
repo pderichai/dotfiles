@@ -28,6 +28,9 @@ export NVM_DIR="$HOME/.nvm"
 # OPAM configuration
 . /Users/dericp/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
+# rbenv init
+eval "$(rbenv init -)"
+
 ## PROMPT ##
 # return exit code if nonzero
 function nonzero_return() {

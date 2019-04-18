@@ -46,8 +46,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'valloric/youcompleteme'
-Plug 'w0rp/ale'
 Plug 'morhetz/gruvbox'
+Plug 'vim-syntastic/syntastic'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 
 " initialize plugin system
 call plug#end()
@@ -69,6 +72,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " open NERDTree when opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" close preview window after completing
+let g:ycm_autoclose_preview_window_after_completion=1
 
 " color scheme
 set termguicolors
