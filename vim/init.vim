@@ -51,6 +51,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'airblade/vim-gitgutter'
 
 " initialize plugin system
 call plug#end()
