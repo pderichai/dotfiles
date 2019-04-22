@@ -15,6 +15,9 @@ inoremap jk <Esc>
 " enable syntax highlighting
 syntax enable
 
+" lower update time to 100ms
+set updatetime=100
+
 " default tab size set to 4
 set tabstop=4
 " default shift size set to 4
