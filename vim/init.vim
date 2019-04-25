@@ -78,6 +78,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " open NERDTree when opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+" remap NERDTree open split commands
+let NERDTreeMapOpenSplit = '-'
+let NERDTreeMapOpenVSplit = '<Bar>'
 
 " show vim buffers as tabs in airline
 let g:airline#extensions#tabline#enabled = 1
@@ -85,10 +88,10 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " set Gutentags cache dir
-let g:gutentags_cache_dir = "~/.gutentags"
+let g:gutentags_cache_dir = '~/.gutentags'
 
 " close YCM preview window after completing
-let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " color scheme
 set termguicolors
