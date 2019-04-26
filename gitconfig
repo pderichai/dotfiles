@@ -3,3 +3,5 @@
     email = dericp@cs.washington.edu
 [core]
 	editor = nvim
+[init]
+	templatedir = ~/.git_template

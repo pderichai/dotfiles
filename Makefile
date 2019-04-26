@@ -15,4 +15,5 @@ shared: vim
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/tmux.conf.local" ~/.tmux.conf.local
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
+	@ln -nfs "${pwd}/git_template" ~/.git_template
 	@ln -nfs "${pwd}/condarc" ~/.condarc
