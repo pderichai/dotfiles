@@ -96,6 +96,8 @@ let g:gutentags_cache_dir = '~/.gutentags'
 
 " close YCM preview window after completing
 let g:ycm_autoclose_preview_window_after_completion = 1
+" do not confirm loading extra YCM configuration
+let g:ycm_confirm_extra_conf = 0
 
 " color scheme
 set termguicolors
