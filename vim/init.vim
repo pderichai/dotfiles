@@ -3,7 +3,7 @@ let g:python_host_prog = expand($HOME) . '/anaconda3/envs/neovim2/bin/python'
 let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
 
 " change the leader key
-nnoremap <SPACE> <Nop>
+nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
 
 " draw vertical lines at 80 and 100
@@ -37,8 +37,11 @@ nnoremap <Leader>k <C-W><C-K>
 nnoremap <Leader>l <C-W><C-L>
 nnoremap <Leader>h <C-W><C-H>
 
+" better keybindings for buffer switching
+nnoremap <Leader>b :ls<CR>:b<Space>
+
 " clear search highlights quickly
-nnoremap <Leader><space> :noh<cr>
+nnoremap <Leader><Space> :noh<CR>
 
 " plugins
 " specify a directory for plugins
