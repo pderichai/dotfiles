@@ -51,8 +51,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'valloric/youcompleteme'
-Plug 'morhetz/gruvbox'
+Plug 'nlknguyen/papercolor-theme'
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
@@ -88,11 +89,10 @@ let NERDTreeMapOpenVSplit = '<Bar>'
 
 " show vim buffers as tabs in airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-
-" set Gutentags cache dir
-let g:gutentags_cache_dir = '~/.gutentags'
+" use powerline fonts in airline
+let g:airline_powerline_fonts = 1
+" use the airline theme to match the vim color scheme
+let g:airline_theme='papercolor'
 
 " close YCM preview window after completing
 let g:ycm_autoclose_preview_window_after_completion = 1
@@ -101,7 +101,14 @@ let g:ycm_confirm_extra_conf = 0
 
 " color scheme
 set termguicolors
-set background=dark
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+set background=light
+" allow italic and bold text
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'allow_italic': 1,
+  \       'allow_bold': 1
+  \     }
+  \   }
+  \ }
+colorscheme PaperColor
