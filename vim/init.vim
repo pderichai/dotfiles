@@ -57,6 +57,7 @@ Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'jreybert/vimagit'
 
 " initialize plugin system
 call plug#end()
