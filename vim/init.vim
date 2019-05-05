@@ -99,6 +99,9 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " do not confirm loading extra YCM configuration
 let g:ycm_confirm_extra_conf = 0
 
+" ALE highlighting throws a ton of errors, so let's disable it
+let g:ale_set_highlights = 0
+
 " color scheme
 set termguicolors
 set background=light
