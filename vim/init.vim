@@ -102,6 +102,9 @@ let g:ycm_confirm_extra_conf = 0
 " ALE highlighting throws a ton of errors, so let's disable it
 let g:ale_set_highlights = 0
 
+" turn off gitgutter mappings
+let g:gitgutter_map_keys = 0
+
 " color scheme
 set termguicolors
 set background=light
