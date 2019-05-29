@@ -43,6 +43,27 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 " clear search highlights quickly
 nnoremap <Leader><Space> :noh<CR>
 
+" replace the word under cursor
+nnoremap <Leader>R :%s/\<<c-r><c-w>\>//g<left><left>
+nnoremap <Leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
+
+" autoclose tags
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<Left>
+inoremap " ""<Left>
+
+" Tab to switch to next open buffer
+nnoremap <Tab> :bnext<cr>
+" Shift + Tab to switch to previous open buffer
+nnoremap <S-Tab> :bprevious<cr>
+" create a new buffer (save it with :w ./path/to/FILENAME)
+nnoremap <leader>B :enew<cr>
+" close current buffer
+nnoremap <leader>bq :bp <bar> bd! #<cr>
+" close all open buffers
+nnoremap <leader>ba :bufdo bd!<cr>
+
 " plugins
 " specify a directory for plugins
 call plug#begin('~/.vim/plugged')
@@ -77,12 +98,6 @@ let NERDTreeDirArrows = 1
 map <Leader>n :NERDTreeToggle<CR>
 " close vim if the only window open is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" open NERDTree when starting vim with no arguments
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" open NERDTree when opening a directory
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 " remap NERDTree open split commands
 let NERDTreeMapOpenSplit = '-'
 let NERDTreeMapOpenVSplit = '<Bar>'
