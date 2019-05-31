@@ -47,22 +47,16 @@ nnoremap <Leader><Space> :noh<CR>
 nnoremap <Leader>R :%s/\<<c-r><c-w>\>//g<left><left>
 nnoremap <Leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
-" autoclose tags
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-
 " Tab to switch to next open buffer
-nnoremap <Tab> :bnext<cr>
+nnoremap <Tab> :bnext<CR>
 " Shift + Tab to switch to previous open buffer
-nnoremap <S-Tab> :bprevious<cr>
+nnoremap <S-Tab> :bprevious<CR>
 " create a new buffer (save it with :w ./path/to/FILENAME)
-nnoremap <leader>B :enew<cr>
+nnoremap <Leader>B :enew<CR>
 " close current buffer
-nnoremap <leader>bq :bp <bar> bd! #<cr>
+nnoremap <Leader>bq :bp <bar> bd! #<CR>
 " close all open buffers
-nnoremap <leader>ba :bufdo bd!<cr>
+nnoremap <Leader>ba :bufdo bd!<CR>
 
 " plugins
 " specify a directory for plugins
@@ -83,6 +77,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " initialize plugin system
 call plug#end()
