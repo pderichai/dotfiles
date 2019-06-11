@@ -1,8 +1,8 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: shared vim
+.PHONY: shared vim spacemacs
 
-macos: shared
+macos: shared spacemacs
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 
 ubuntu: shared
@@ -10,6 +10,10 @@ ubuntu: shared
 
 vim:
 	cd vim && make link
+
+spacemacs:
+	@ln -nfs "${pwd}/emacs.d" ~/.emacs.d
+	@ln -nfs "${pwd}/spacemacs" ~/.spacemacs
 
 shared: vim
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
