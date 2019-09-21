@@ -9,9 +9,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 # personal bins
 export PATH="$HOME"/bin:"$PATH"
 
-# Homebrew API Token
-export HOMEBREW_GITHUB_API_TOKEN="e821346d97162a5697a0ea981fd6712d84ce262e"
-
 # Anaconda
 export PATH="$HOME/anaconda3/bin:$PATH"
 
