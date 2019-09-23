@@ -1,6 +1,6 @@
-" python interpreter paths
-let g:python_host_prog = expand($HOME) . '/anaconda3/envs/neovim2/bin/python'
-let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
+" python interpreter paths for YCM
+"let g:python_host_prog = expand($HOME) . '/anaconda3/envs/neovim2/bin/python'
+"let g:python3_host_prog = expand($HOME) . '/anaconda3/envs/neovim3/bin/python'
 
 " change the leader key
 nnoremap <Space> <Nop>
@@ -67,7 +67,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'nlknguyen/papercolor-theme'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
@@ -106,9 +106,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='papercolor'
 
 " close YCM preview window after completing
-let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
 " do not confirm loading extra YCM configuration
-let g:ycm_confirm_extra_conf = 0
+"let g:ycm_confirm_extra_conf = 0
 
 " ALE highlighting throws a ton of errors, so let's disable it
 let g:ale_set_highlights = 0

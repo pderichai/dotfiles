@@ -1,4 +1,5 @@
 #	Reconstructed via infocmp from file: /usr/share/terminfo/t/tmux
+#	Install with `tic -x tmux.terminfo`.
 tmux|tmux terminal multiplexer,
 	OTbs, OTpt, am, hs, km, mir, msgr, xenl, AX, G0,
 	colors#8, cols#80, it#8, lines#24, pairs#64, U8#1,
