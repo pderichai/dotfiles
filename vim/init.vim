@@ -39,6 +39,8 @@ nnoremap <Leader>h <C-W><C-H>
 " Better keybindings for buffer switching.
 nnoremap <Leader>b :ls<CR>:b<Space>
 
+" Highlight all search matches.
+set hlsearch
 " Clear search highlights quickly.
 nnoremap <Leader><Space> :noh<CR>
 
