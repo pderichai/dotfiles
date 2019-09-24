@@ -61,7 +61,7 @@ nnoremap <Leader>bq :bp <bar> bd! #<CR>
 " close all open buffers
 nnoremap <Leader>ba :bufdo bd!<CR>
 
-" plugins
+"" plugins
 " specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
@@ -119,9 +119,11 @@ let g:ale_set_highlights = 0
 " turn off gitgutter mappings
 let g:gitgutter_map_keys = 0
 
-" color scheme
+"" color scheme
+" set Vim-specific sequences for RGB colors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
-set background=light
 " allow italic and bold text
 let g:PaperColor_Theme_Options = {
   \   'theme': {
@@ -131,4 +133,6 @@ let g:PaperColor_Theme_Options = {
   \     }
   \   }
   \ }
+" set the color scheme
+set background=light
 colorscheme PaperColor
