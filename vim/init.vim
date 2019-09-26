@@ -18,10 +18,10 @@ syntax enable
 " Lower update time to 100ms.
 set updatetime=100
 
-" Set default tab size to 4.
-set tabstop=4
-" Set default shift size set to 4
-set shiftwidth=4
+" Set default tab size to 2.
+set tabstop=2
+" Set default shift size set to 2.
+set shiftwidth=2
 " Use spaces over tabs by default.
 set expandtab
 " Custom tab settings for certain filetypes.
@@ -68,7 +68,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'valloric/youcompleteme'
 Plug 'nlknguyen/papercolor-theme'
 Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
