@@ -9,8 +9,10 @@ set colorcolumn=80,100
 " Highlight the whoel line when in insert mode.
 autocmd InsertEnter,InsertLeave * set cul!
 
-" Use "jk" to exit insert mode.
-inoremap jk <Esc>
+" Use "fd" to exit insert, eX, and command modes.
+inoremap fd <Esc>
+xnoremap fd <Esc>
+cnoremap fd <c-c>
 
 " Enable syntax highlighting.
 syntax enable
