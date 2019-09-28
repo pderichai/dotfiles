@@ -6,7 +6,7 @@ let mapleader = "\<Space>"
 " Draw vertical lines at 80 and 100.
 set colorcolumn=80,100
 
-" Highlight the whoel line when in insert mode.
+" Highlight the whole line when in insert mode.
 autocmd InsertEnter,InsertLeave * set cul!
 
 " Use "fd" to exit insert, eX, and command modes.
