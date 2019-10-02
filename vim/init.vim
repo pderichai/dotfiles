@@ -71,16 +71,14 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nlknguyen/papercolor-theme'
-Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'vim-syntastic/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
-Plug 'jreybert/vimagit'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'jiangmiao/auto-pairs'
 
 " Initialize the plugin system.
 call plug#end()
@@ -100,18 +98,34 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeMapOpenSplit = '-'
 let NERDTreeMapOpenVSplit = '<Bar>'
 
+" Use ag for CtrlP.
+if executable('ag')
+  " Use ag over grep.
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore.
+  let g:ctrlp_user_command = '/usr/bin/ag %s -i --nocolor --nogroup --hidden
+    \ --ignore .git
+    \ --ignore .svn
+    \ --ignore .hg
+    \ --ignore .DS_Store
+    \ --ignore "**/*.pyc"
+    \ --ignore .git5_specs
+    \ --ignore review
+    \ -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache.
+  let g:ctrlp_use_caching = 0
+endif
+" Restrict CtrlP to searching only the directories from which we ran vim.
+let g:ctrlp_working_path_mode = 0
+
 " Show vim buffers as tabs in airline.
 let g:airline#extensions#tabline#enabled = 1
 " Use powerline fonts in airline.
 let g:airline_powerline_fonts = 1
 " Set the color scheme of airline.
 let g:airline_theme='papercolor'
-
-" ALE highlighting throws a ton of errors, so let's disable it.
-let g:ale_set_highlights = 0
-
-" Turn off gitgutter mappings.
-let g:gitgutter_map_keys = 0
 
 "" Color Scheme
 " Set Vim-specific sequences for RGB colors.
