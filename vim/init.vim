@@ -79,6 +79,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Initialize the plugin system.
 call plug#end()
