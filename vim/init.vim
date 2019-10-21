@@ -26,8 +26,6 @@ set tabstop=2
 set shiftwidth=2
 " Use spaces over tabs by default.
 set expandtab
-" Custom tab settings for certain filetypes.
-autocmd FileType tex setlocal tabstop=2 shiftwidth=2
 
 " Enable line numbers.
 set number
@@ -39,7 +37,7 @@ nnoremap <Leader>l <C-W><C-L>
 nnoremap <Leader>h <C-W><C-H>
 
 " Better keybindings for buffer switching.
-nnoremap <Leader>b :ls<CR>:b<Space>
+nnoremap <Leader>bb :ls<CR>:b<Space>
 
 " Highlight all search matches.
 set hlsearch
@@ -87,7 +85,7 @@ call plug#end()
 
 " Close NERDTree after opening a file.
 let NERDTreeQuitOnOpen = 1
-" Delete buffer when deleteing file.
+" Delete buffer when deleting file.
 let NERDTreeAutoDeleteBuffer = 1
 " Make things prettier.
 let NERDTreeMinimalUI = 1
