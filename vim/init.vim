@@ -90,8 +90,9 @@ let NERDTreeAutoDeleteBuffer = 1
 " Make things prettier.
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-" Open NERDTree wih "<Leader> + n".
-map <Leader>n :NERDTreeToggle<CR>
+" Open NERDTree wih "<Leader> + n". Always opens in the current working
+" directory.
+nnoremap <expr> <leader>n g:NERDTree.ExistsForTab() && g:NERDTree.IsOpen() ? ":NERDTreeToggle\<CR>" : ":NERDTreeCWD\<CR>"
 " Close vim if the only window open is NERDTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Remap NERDTree open split commands.
