@@ -1,6 +1,6 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: macos ubuntu shared vim
+.PHONY: macos ubuntu vim shared
 
 macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
