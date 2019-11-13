@@ -52,10 +52,6 @@ nnoremap <Leader>h <C-W><C-H>
 " More natural window split openings.
 set splitbelow
 set splitright
-" Better keybindings for window splits.
-nnoremap <Leader>w <C-W>
-nnoremap <Leader>w- :split<CR>
-nnoremap <Leader>w<Bar> :vsplit<CR>
 
 
 "" Buffers
@@ -66,12 +62,12 @@ nnoremap <Leader>bb :ls<CR>:b<Space>
 nnoremap <Tab> :bnext<CR>
 " Switch to previous open buffer with "<Shift> + <Tab>".
 nnoremap <S-Tab> :bprevious<CR>
+
 " Create a new buffer (save it with :w ./path/to/FILENAME).
 nnoremap <Leader>B :enew<CR>
-" Close the current buffer.
-nnoremap <Leader>bq :bp <bar> bd! #<CR>
+
 " Close all open buffers.
-nnoremap <Leader>ba :bufdo bd!<CR>bd<CR>
+nnoremap <Leader>ba :bufdo bd<CR>bd<CR>
 
 
 
