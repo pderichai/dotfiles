@@ -2,6 +2,6 @@
     name = Deric Pang
     email = dericp@cs.washington.edu
 [core]
-	editor = nvim
+	editor = vim
 [init]
 	templatedir = ~/.git_template
