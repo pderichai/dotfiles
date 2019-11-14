@@ -1,5 +1,5 @@
 #!/bin/bash
-SLEEP_TIME=5 # The delay in seconds before attempting to reconnect.
+SLEEP_TIME=1 # The delay in seconds before attempting to reconnect.
 ALIVE_INTERVAL=10 # How long to keep the SSH session alive.
 HOSTNAME="$1" # The hostname is passed as the first argument.
 SSH_OPTS="-oCompression=yes -oCheckHostIP=no -oServerAliveInterval=$ALIVE_INTERVAL"
