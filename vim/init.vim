@@ -6,8 +6,8 @@ let mapleader = "\<Space>"
 " Draw vertical lines at 80 and 100.
 set colorcolumn=80,100
 
-" Highlight the whole line when in insert mode.
-autocmd InsertEnter,InsertLeave * set cul!
+" Highlight the line that the cursor is currently on.
+set cursorline
 
 " Use "fd" to exit insert, eX, and command modes.
 inoremap fd <Esc>
@@ -154,3 +154,12 @@ let g:PaperColor_Theme_Options = {
 " Set the color scheme.
 set background=light
 colorscheme PaperColor
+
+" Default Colors for CursorLine.
+highlight  CursorLine ctermbg=Yellow ctermfg=None
+
+" Change Color when entering Insert Mode
+autocmd InsertEnter * highlight  CursorLine ctermbg=LightGreen ctermfg=None
+
+" Revert Color to default when leaving Insert Mode
+autocmd InsertLeave * highlight  CursorLine ctermbg=Yellow ctermfg=None
