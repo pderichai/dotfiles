@@ -163,8 +163,8 @@ set background=light
 colorscheme PaperColor
 
 " Default colors for CursorLine.
-highlight CursorLine guibg=Yellow ctermbg=Yellow
+highlight CursorLine guibg=LightCyan ctermbg=LightCyan
 " Change color when entering insert mode.
 autocmd InsertEnter * highlight CursorLine guibg=LightGreen ctermbg=LightGreen
 " Revert color to default when leaving insert mode.
-autocmd InsertLeave * highlight CursorLine guibg=Yellow ctermbg=Yellow
+autocmd InsertLeave * highlight CursorLine guibg=LightCyan ctermbg=LightCyan
