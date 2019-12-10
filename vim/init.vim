@@ -49,8 +49,9 @@ set shiftwidth=2
 " Use spaces over tabs by default.
 set expandtab
 
-" Enable line numbers.
-set number
+" Enable relative line numbers.
+set number relativenumber
+set nu rnu
 
 " Highlight all search matches.
 set hlsearch
