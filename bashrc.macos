@@ -25,6 +25,9 @@ export NVM_DIR="$HOME/.nvm"
 # rbenv init
 eval "$(rbenv init -)"
 
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 ## PROMPT ##
 # return exit code if nonzero
 function nonzero_return() {
