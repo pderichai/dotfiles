@@ -1,6 +1,7 @@
 # aliases
 alias ll="ls -lhA"
 alias grep="grep --color=auto"
+alias godel="ssh-tmux pderichai@godel"
 
 # ls colors
 export CLICOLOR=1
@@ -8,9 +9,6 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # personal bins
 export PATH="$HOME"/bin:"$PATH"
-
-# Anaconda
-export PATH="$HOME/anaconda3/bin:$PATH"
 
 # Making PyTorch see GPUs in the same order as `nvidia-smi`.
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
@@ -20,10 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
 # OPAM configuration
-. /Users/dericp/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-
-# rbenv init
-eval "$(rbenv init -)"
+. /Users/pderichai/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
