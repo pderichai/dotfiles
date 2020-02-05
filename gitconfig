@@ -1,7 +1,7 @@
 [user]
     name = Deric Pang
-    email = dericp@cs.washington.edu
+    email = pderichai@gmail.com
 [core]
-	editor = vim
+    editor = vim
 [init]
-	templatedir = ~/.git_template
+    templatedir = ~/.git_template

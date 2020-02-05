@@ -2,6 +2,11 @@ pwd := $(shell pwd -LP)
 
 .PHONY: macos ubuntu vim shared
 
+googlemacos:
+	cd google-dotfiles && make macos
+googlelinux:
+	cd google-dotfiles && make linux
+
 macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 
