@@ -14,6 +14,7 @@ macos: shared
 
 ubuntu: shared
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
+	@if [ ! -d ~/.config/fish  ]; then mkdir -p ~/.config/fish; fi && ln -nfs "${pwd}/config.fish.ubuntu" ~/.config/fish/config.fish
 
 vim:
 	cd vim && make link
