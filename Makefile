@@ -10,6 +10,7 @@ googlelinux:
 
 macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
+	@if [ ! -d ~/.config/fish  ]; then mkdir -p ~/.config/fish; fi && ln -nfs "${pwd}/config.fish.macos" ~/.config/fish/config.fish
 
 ubuntu: shared
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
@@ -19,7 +20,6 @@ vim:
 
 shared: vim
 	@ln -nfs "${pwd}/bin" ~/bin
-	@if [ ! . -ef ~/.config/fish  ]; then mkdir -p ~/.config/fish; fi && ln -nfs "${pwd}/config.fish" ~/.config/fish/config.fish
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/tmux.conf.local" ~/.tmux.conf.local
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
