@@ -132,12 +132,6 @@ let g:airline_powerline_fonts = 1
 " Set the color scheme of airline.
 let g:airline_theme='papercolor'
 
-"" vim-signify
-" Use citcdiff in vim-signify for Perforce repositories.
-let g:signify_vcs_cmds = {'perforce':'DIFF=%d" -U0" citcdiff %f || [[ $? == 1  ]]'}
-" Query perforce before git.
-let g:signify_vcs_list = ['perforce', 'git']
-
 "" FZF
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>bb :Buffers<CR>
