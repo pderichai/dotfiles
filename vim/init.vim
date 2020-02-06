@@ -6,7 +6,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'nlknguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
@@ -130,7 +130,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Set the color scheme of airline.
-let g:airline_theme='papercolor'
+let g:airline_theme='gruvbox'
 
 "" FZF
 nnoremap <Leader>ff :Files<CR>
@@ -143,23 +143,10 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
-" Allow italics and bold text.
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default': {
-  \       'allow_italic': 1,
-  \       'allow_bold': 1
-  \     }
-  \   }
-  \ }
+" Allow italics.
+let g:gruvbox_italic = 1
+let g:gruvbox_contrast_dark = "hard"
 
 " Set the color scheme.
-set background=light
-colorscheme PaperColor
-
-" Default colors for CursorLine.
-highlight CursorLine guibg=LightCyan ctermbg=LightCyan
-" Change color when entering insert mode.
-autocmd InsertEnter * highlight CursorLine guibg=LightGreen ctermbg=LightGreen
-" Revert color to default when leaving insert mode.
-autocmd InsertLeave * highlight CursorLine guibg=LightCyan ctermbg=LightCyan
+set background=dark
+colorscheme gruvbox

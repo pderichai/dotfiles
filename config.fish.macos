@@ -1,4 +1,5 @@
 # Abbreviations.
+abbr -a e 'nvim'
 abbr -a grep 'grep --color=auto'
 abbr -a godel 'ssh-tmux pderichai@godel'
 
