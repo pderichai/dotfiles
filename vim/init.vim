@@ -21,8 +21,19 @@ Plug 'junegunn/fzf.vim'
 " Initialize the plugin system.
 call plug#end()
 
-
 """ General Settings
+filetype plugin indent on
+set autoindent
+set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
+set encoding=utf-8
+set scrolloff=2
+set noshowmode
+set hidden
+set nowrap
+set nojoinspaces
+" Always draw sign column. Prevent buffer moving when adding/deleting sign.
+set signcolumn=yes
+
 " Change the leader key.
 nnoremap <Space> <Nop>
 let mapleader = "\<Space>"
@@ -51,10 +62,16 @@ set expandtab
 
 " Enable relative line numbers.
 set number relativenumber
-set nu rnu
 
-" Highlight all search matches.
+" Proper search
+set incsearch
+set ignorecase
+set smartcase
+set gdefault
 set hlsearch
+
+" Leave paste mode when leaving insert mode
+autocmd InsertLeave * set nopaste
 
 " More natural window split openings.
 set splitbelow
@@ -65,6 +82,18 @@ set splitright
 inoremap fd <Esc>
 xnoremap fd <Esc>
 cnoremap fd <c-c>
+
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+
+" Very magic by default
+nnoremap ? ?\v
+nnoremap / /\v
+cnoremap %s/ %sm/
 
 " Clear search highlights quickly.
 nnoremap <Leader><Space> :noh<CR>
@@ -97,7 +126,6 @@ nnoremap <Leader>B :enew<CR>
 
 " Close all open buffers.
 nnoremap <Leader>ba :bufdo bd<CR>bd<CR>
-
 
 """ Plugins
 "" NERDTree
