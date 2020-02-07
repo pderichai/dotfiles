@@ -23,6 +23,7 @@ call plug#end()
 
 """ General Settings
 filetype plugin indent on
+syntax enable
 set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
@@ -46,9 +47,6 @@ set cursorline
 
 " Show the current vim command.
 set showcmd
-
-" Enable syntax highlighting.
-syntax enable
 
 " Lower update time to 100ms.
 set updatetime=100
