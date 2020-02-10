@@ -5,3 +5,6 @@ abbr -a godel 'ssh-tmux pderichai@godel'
 
 # Personal bins.
 set -U fish_user_paths ~/bin $fish_user_paths
+
+# Clear greeting.
+set fish_greeting

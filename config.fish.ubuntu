@@ -4,3 +4,6 @@ abbr -a grep 'grep --color=auto'
 
 # Personal bins.
 set -U fish_user_paths ~/bin $fish_user_paths
+
+# Clear greeting.
+set fish_greeting
