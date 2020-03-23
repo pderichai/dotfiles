@@ -2,21 +2,24 @@
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdcommenter'
-Plug 'mhinz/vim-signify'
-Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+Plug 'google/vim-maktaba'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-signify'
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'vim-syntastic/syntastic'
 
 " Initialize the plugin system.
 call plug#end()
@@ -48,8 +51,8 @@ set cursorline
 " Show the current vim command.
 set showcmd
 
-" Lower update time to 100ms.
-set updatetime=100
+" Lower update time to 300ms.
+set updatetime=300
 
 " Set default tab size to 2.
 set tabstop=2
