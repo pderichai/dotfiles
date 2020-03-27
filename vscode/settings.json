@@ -1,0 +1,40 @@
+{
+  "vim.leader": "space",
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f", "d"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f", "d"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.commandLineModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f", "d"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.navigateLeft"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.navigateDown"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.navigateUp"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.navigateRight"]
+    }
+  ],
+  "workbench.activityBar.visible": true
+}
