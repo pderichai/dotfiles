@@ -1,24 +1,12 @@
 // Place your key bindings in this file to override the defaults
 [
+    // Remap command palette toggle.
     {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showCommands"
     },
-    {
-        "key": "tab",
-        "command": "workbench.action.nextEditorInGroup",
-        "when": "!inDebugRepl && ((editorFocus && vim.active && vim.mode != 'Insert') || !editorFocus)"
-    },
-    {
-        "key": "shift+tab",
-        "command": "workbench.action.previousEditorInGroup",
-        "when": "!inDebugRepl && ((editorFocus && vim.active && vim.mode != 'Insert') || !editorFocus)"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-extension.vim_ctrl+g",
-        "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
-    },
+
+    // Set ctrl+g to "close" things.
     {
         "key": "ctrl+g",
         "command": "extension.vim_escape",
@@ -28,5 +16,69 @@
         "key": "ctrl+g",
         "command": "workbench.action.closeQuickOpen",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-workbench.action.gotoLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-extension.vim_ctrl+g",
+        "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
+    },
+
+    // Sane tab navigation.
+    {
+        "key": "tab",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "!terminalFocus && !inDebugRepl && !editorFocus || editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "!terminalFocus && !inDebugRepl && !editorFocus || editorFocus && vim.active && vim.mode != 'Insert'"
+    },
+
+    // Configure quick open.
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+
+    // Emulating NERDTree.
+    {
+        "key": "ctrl+n",
+        "command": "macros.openExplorer",
+        "when": "!explorerViewletVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletVisible"
+    },
+    {
+        "key": "enter",
+        "command": "macros.openFileInExplorer",
+        "when": "explorerViewletVisible && filesExplorerFocus && listFocus && !inputFocus && !explorerResourceIsFolder"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     }
 ]

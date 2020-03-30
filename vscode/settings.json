@@ -1,40 +1,78 @@
 {
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+
+  "terminal.integrated.fontFamily": "Source Code Pro",
+
+  "macros": {
+    "openExplorer": [
+      "workbench.action.toggleSidebarVisibility",
+      "workbench.files.action.focusFilesExplorer"
+    ],
+    "openFileInExplorer": [
+      "list.select",
+      "workbench.action.keepEditor",
+      "workbench.action.toggleSidebarVisibility"
+    ]
+  },
+
   "vim.leader": "space",
+
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
+
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
+
   "vim.commandLineModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
+
   "vim.normalModeKeyBindingsNonRecursive": [
+    // "Window" settings.
     {
-      "before": ["<leader>", "h"],
+      "before": ["<leader>", "w", "|"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "w", "-"],
+      "commands": ["workbench.action.splitEditorOrthogonal"]
+    },
+    {
+      "before": ["<leader>", "w", "c"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "h"],
       "commands": ["workbench.action.navigateLeft"]
     },
     {
-      "before": ["<leader>", "j"],
+      "before": ["<leader>", "w", "j"],
       "commands": ["workbench.action.navigateDown"]
     },
     {
-      "before": ["<leader>", "k"],
+      "before": ["<leader>", "w", "k"],
       "commands": ["workbench.action.navigateUp"]
     },
     {
-      "before": ["<leader>", "l"],
+      "before": ["<leader>", "w", "l"],
       "commands": ["workbench.action.navigateRight"]
+    },
+
+    // "Buffer" settings.
+    {
+      "before": ["<leader>", "b", "d"],
+      "commands": ["workbench.action.closeActiveEditor"]
     }
-  ],
-  "workbench.activityBar.visible": true
+  ]
 }
