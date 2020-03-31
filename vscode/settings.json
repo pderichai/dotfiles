@@ -1,7 +1,11 @@
 {
   "workbench.colorTheme": "Gruvbox Dark Hard",
 
+  "workbench.editor.enablePreview": false,
+
   "terminal.integrated.fontFamily": "Source Code Pro",
+
+  "terminal.integrated.scrollback": 10000,
 
   "macros": {
     "openExplorer": [
@@ -10,7 +14,6 @@
     ],
     "openFileInExplorer": [
       "list.select",
-      "workbench.action.keepEditor",
       "workbench.action.toggleSidebarVisibility"
     ]
   },

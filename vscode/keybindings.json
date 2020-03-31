@@ -6,6 +6,12 @@
         "command": "workbench.action.showCommands"
     },
 
+    // Remap file/folder opening.
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.files.openFileFolder"
+    },
+
     // Set ctrl+g to "close" things.
     {
         "key": "ctrl+g",
@@ -16,15 +22,6 @@
         "key": "ctrl+g",
         "command": "workbench.action.closeQuickOpen",
         "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-workbench.action.gotoLine"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "-extension.vim_ctrl+g",
-        "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
     },
 
     // Sane tab navigation.
@@ -64,7 +61,12 @@
     {
         "key": "ctrl+n",
         "command": "workbench.action.toggleSidebarVisibility",
-        "when": "explorerViewletVisible"
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.files.action.focusFilesExplorer",
+        "when": "explorerViewletVisible && !filesExplorerFocus"
     },
     {
         "key": "enter",
@@ -74,11 +76,6 @@
     {
         "key": "ctrl+r",
         "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "enter",
-        "command": "-renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     }
 ]
