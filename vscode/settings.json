@@ -3,6 +3,8 @@
 
   "workbench.editor.enablePreview": false,
 
+  "editor.rulers": [80],
+
   "terminal.integrated.fontFamily": "Source Code Pro",
 
   "terminal.integrated.scrollback": 10000,
