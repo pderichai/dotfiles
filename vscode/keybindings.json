@@ -36,6 +36,37 @@
         "when": "!terminalFocus && !inDebugRepl && !editorFocus || editorFocus && vim.active && vim.mode != 'Insert'"
     },
 
+    // Terminal keybindings.
+    {
+        "key": "ctrl+b l",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b h",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b shift+\\",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b c",
+        "command": "workbench.action.terminal.new"
+    },
+    {
+        "key": "ctrl+b n",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b p",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+
     // Configure quick open.
     {
         "key": "ctrl+j",
