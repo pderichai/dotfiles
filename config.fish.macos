@@ -4,7 +4,7 @@ abbr -a grep 'grep --color=auto'
 abbr -a godel 'ssh-tmux pderichai@godel'
 
 # Personal bins.
-set -U fish_user_paths ~/bin $fish_user_paths
+set -gx PATH ~/bin $PATH
 
 # Clear greeting.
 set fish_greeting

@@ -3,7 +3,7 @@ abbr -a e 'nvim'
 abbr -a grep 'grep --color=auto'
 
 # Personal bins.
-set -U fish_user_paths ~/bin $fish_user_paths
+set -gx PATH ~/bin $PATH
 
 # Clear greeting.
 set fish_greeting
