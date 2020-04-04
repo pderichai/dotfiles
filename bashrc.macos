@@ -1,36 +1,26 @@
-# aliases
+# Aliases.
 alias ll="ls -lhA"
 alias grep="grep --color=auto"
 alias godel="ssh-tmux pderichai@godel"
 
-# ls colors
+# ls colors.
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-# personal bins
+# Personal bins.
 export PATH="$HOME"/bin:"$PATH"
-
-# Making PyTorch see GPUs in the same order as `nvidia-smi`.
-export CUDA_DEVICE_ORDER=PCI_BUS_ID
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
-# OPAM configuration
-. /Users/pderichai/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 ## PROMPT ##
-# return exit code if nonzero
+# Return exit code if nonzero.
 function nonzero_return() {
 	RETVAL=$?
 	[ $RETVAL -ne 0 ] && echo "[$RETVAL] "
 }
 
-# get current branch in git repo
+# Get current branch in git repo.
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 	if [ ! "${BRANCH}" == "" ]
@@ -42,7 +32,7 @@ function parse_git_branch() {
 	fi
 }
 
-# get current status of git repo
+# Get current status of git repo.
 function parse_git_dirty {
 	status=`git status 2>&1 | tee`
 	dirty=`echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?"`
