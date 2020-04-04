@@ -84,14 +84,14 @@ inoremap fd <Esc>
 xnoremap fd <Esc>
 cnoremap fd <c-c>
 
-" Search results centered please
+" Search results centered please.
 nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
-" Very magic by default
+" Very magic by default.
 nnoremap ? ?\v
 nnoremap / /\v
 cnoremap %s/ %sm/
@@ -104,10 +104,10 @@ nnoremap <Leader>R :%s/\<<c-r><c-w>\>//g<left><left>
 nnoremap <Leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
 
 " Better keybindings for window switching.
-nnoremap <Leader>j <C-W><C-J>
-nnoremap <Leader>k <C-W><C-K>
-nnoremap <Leader>l <C-W><C-L>
-nnoremap <Leader>h <C-W><C-H>
+nnoremap <Leader>wj <C-W><C-J>
+nnoremap <Leader>wk <C-W><C-K>
+nnoremap <Leader>wl <C-W><C-L>
+nnoremap <Leader>wh <C-W><C-H>
 
 " Better keybindings for window splits.
 nnoremap <Leader>w <C-W>
@@ -124,6 +124,9 @@ nnoremap <S-Tab> :bprevious<CR>
 
 " Create a new buffer (save it with :w ./path/to/FILENAME).
 nnoremap <Leader>B :enew<CR>
+
+" Close a buffer.
+nnoremap <Leader>bd :bd<CR>
 
 " Close all open buffers.
 nnoremap <Leader>ba :bufdo bd<CR>bd<CR>
