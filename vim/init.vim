@@ -107,9 +107,6 @@ nnoremap <Leader>ba :bufdo bd<CR>bd<CR>
 """ Source plugins settings.
 runtime plugins.vim
 
-""" Source Google vim configs.
-runtime google.vim
-
 """ Color Scheme
 " Use 256 colors.
 set t_Co=256
