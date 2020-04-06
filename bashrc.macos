@@ -1,6 +1,10 @@
+# Stop telling me to stop using Bash.
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Aliases.
 alias ll="ls -lhA"
 alias grep="grep --color=auto"
+alias e="nvim"
 alias godel="ssh-tmux pderichai@godel"
 
 # ls colors.

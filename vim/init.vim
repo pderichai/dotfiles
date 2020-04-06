@@ -10,7 +10,6 @@ set hidden
 set nowrap
 set nojoinspaces
 set signcolumn=yes
-set autochdir
 
 " Change the leader key.
 nnoremap <Space> <Nop>
