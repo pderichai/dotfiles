@@ -104,9 +104,6 @@ nnoremap <Leader>bd :bd<CR>
 " Close all open buffers.
 nnoremap <Leader>ba :bufdo bd<CR>bd<CR>
 
-""" Source Google vim configs.
-runtime google.vim
-
 """ Source plugins configs.
 runtime plugins.vim
 
@@ -121,3 +118,6 @@ let g:gruvbox_italic = 1
 set background=dark
 let g:gruvbox_contrast_dark = "hard"
 colorscheme gruvbox
+
+""" Source Google vim configs.
+runtime google.vim
