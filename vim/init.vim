@@ -90,10 +90,10 @@ nnoremap <Leader>w<Bar> :vsplit<CR>
 " Better keybindings for buffer switching.
 nnoremap <Leader>bb :ls<CR>:b<Space>
 
-" Switch to next open buffer with "<Tab>".
-nnoremap <Tab> :bnext<CR>
-" Switch to previous open buffer with "<Shift> + <Tab>".
-nnoremap <S-Tab> :bprevious<CR>
+" Switch to next open buffer.
+nnoremap <Leader>bn :bnext<CR>
+" Switch to previous open buffer.
+nnoremap <Leader>bp :bprevious<CR>
 
 " Create a new buffer (save it with :w ./path/to/FILENAME).
 nnoremap <Leader>B :enew<CR>
