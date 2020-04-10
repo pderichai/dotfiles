@@ -24,8 +24,8 @@ set cursorline
 " Show the current vim command.
 set showcmd
 
-" Lower update time to 300ms.
-set updatetime=300
+" Lower update time to 500ms.
+set updatetime=500
 
 " Set default tab size to 2.
 set tabstop=2
