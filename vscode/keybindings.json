@@ -24,18 +24,6 @@
         "when": "inQuickOpen"
     },
 
-    // Sane tab navigation.
-    {
-        "key": "tab",
-        "command": "workbench.action.nextEditorInGroup",
-        "when": "!terminalFocus && !inDebugRepl && !editorFocus || editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key": "shift+tab",
-        "command": "workbench.action.previousEditorInGroup",
-        "when": "!terminalFocus && !inDebugRepl && !editorFocus || editorFocus && vim.active && vim.mode != 'Insert'"
-    },
-
     // Terminal keybindings.
     {
         "key": "ctrl+b l",

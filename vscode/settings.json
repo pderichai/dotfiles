@@ -78,6 +78,16 @@
     {
       "before": ["<leader>", "b", "d"],
       "commands": ["workbench.action.closeActiveEditor"]
+    },
+
+    // Sane tab navigation.
+    {
+        "before": ["<leader>", "b", "n"],
+        "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    {
+        "before": ["<leader>", "b", "p"],
+        "commands": ["workbench.action.previousEditorInGroup"]
     }
   ]
 }
