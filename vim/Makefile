@@ -2,6 +2,6 @@
 pwd := $(shell pwd -LP)
 
 link:
-	@if [ ! -d ~/.config  ]; then mkdir ~/.config; fi && if [ ! -f ~/.config/nvim  ]; then ln -nfs "${pwd}" ~/.config/nvim; fi
+	@if [ ! -d ~/.config  ]; then mkdir ~/.config; fi && then ln -nfs "${pwd}" ~/.config/nvim
 	@ln -nfs "${pwd}/init.vim" ~/.vimrc
-	@if [ ! -d ~/.vim ]; then ln -nfs "${pwd}" ~/.vim; fi
+	@ln -nfs "${pwd}" ~/.vim
