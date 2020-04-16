@@ -5,7 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'pderichai/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
