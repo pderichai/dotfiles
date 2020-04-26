@@ -12,7 +12,7 @@ set nojoinspaces
 set signcolumn=yes
 
 " Set Python executable.
-let g:python3_host_prog='$HOME/.pyenv/versions/neovim3/bin/python'
+let g:python3_host_prog='$HOME/anaconda3/envs/neovim3/bin/python'
 
 " Change the leader key.
 nnoremap <Space> <Nop>

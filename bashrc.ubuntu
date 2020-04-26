@@ -119,6 +119,26 @@ fi
 # Custom PS1.
 export PS1="\[\e[32m\]\u\[\e[m\]\[\e[90m\]@\[\e[m\]\[\e[92m\]\h\[\e[m\]\[\e[90m\]:\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[31m\]\n\[\e[35m\]>\[\e[m\] "
 
+# Undocumented feature which sets the size to "unlimited".
+# http://stackoverflow.com/questions/9457233/unlimited-bash-history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+
+# Change the file location because certain bash sessions truncate .bash_history file upon close.
+# http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+export HISTFILE=~/.bash_eternal_history
+
+# Allow storing of multi-line shell commands.
+shopt -s cmdhist
+
+# Ensure that history is appended to the file.
+shopt -s histappend
+
+# Force prompt to write history after every command.
+# http://superuser.com/questions/20900/bash-history-loss
+PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+
 # Quick editor command.
 alias e="nvim"
 
@@ -126,28 +146,8 @@ alias e="nvim"
 export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-9.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# Anaconda
-export PATH="$HOME/anaconda3/bin:$PATH"
-
 # Making PyTorch see GPUs in the same order as `nvidia-smi`.
 export CUDA_DEVICE_ORDER=PCI_BUS_ID
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# start fish shell
-if [[ $- = *i* && -z $WHICH_FISH ]] && WHICH_FISH=$(type -p fish); then
-  # Safeguard to only activate fish for interactive shells and only if fish
-  # shell is present and executable. Verify that this is a new session by
-  # checking if $WHICH_FISH is set. If it is not set, we export WHICH_FISH
-  # and start fish.
-  #
-  # If this is not a new session, the user probably typed 'bash' into their
-  # console and wants bash, so we skip this.
-  #
-  # Note that we do not set $SHELL, and neither does fish, because doing so
-  # tends to interfere with programs that expect $SHELL to point to a
-  # POSIX-compatible shell, which fish is not.
-  export WHICH_FISH
-  exec "$WHICH_FISH" -i
-fi

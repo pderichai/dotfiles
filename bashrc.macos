@@ -1,4 +1,4 @@
-# Stop telling me to stop using Bash.
+# Stop telling me to stop using Bash!
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Aliases.
@@ -11,11 +11,49 @@ alias godel="ssh-tmux pderichai@godel"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# Undocumented feature which sets the size to "unlimited".
+# http://stackoverflow.com/questions/9457233/unlimited-bash-history
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+
+# Change the file location because certain bash sessions truncate .bash_history file upon close.
+# http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
+export HISTFILE=~/.bash_eternal_history
+
+# Allow storing of multi-line shell commands.
+shopt -s cmdhist
+
+# Ensure that history is appended to the file.
+shopt -s histappend
+
+# Force prompt to write history after every command.
+# http://superuser.com/questions/20900/bash-history-loss
+PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+
 # Personal bins.
 export PATH="$HOME"/bin:"$PATH"
 
+# Function that creates a new tmux session with tmux.
+main() { tmux new-session -A -s ${1:-main}; }
+
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/pangd/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/pangd/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/pangd/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/pangd/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 ## PROMPT ##
 # Return exit code if nonzero.
