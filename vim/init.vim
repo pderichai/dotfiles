@@ -76,8 +76,9 @@ cnoremap %s/ %sm/
 nnoremap <Leader><Space> :noh<CR>
 
 " Replace the word under cursor.
-nnoremap <Leader>R :%s/\<<c-r><c-w>\>//g<left><left>
-nnoremap <Leader>r :%s/\<<c-r><c-w>\>//gc<left><left><left>
+nnoremap <Leader>R :%s/\<<C-r><C-w>\>//g<left><left>
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<left><left><left>
+vnoremap <Leader>r "hy:%s/<C-r>h//gc<left><left><left>
 
 " Better keybindings for window switching.
 nnoremap <Leader>wj <C-W><C-J>
