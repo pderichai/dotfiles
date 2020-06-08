@@ -61,6 +61,7 @@ let g:airline_theme='gruvbox'
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bl :Lines<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -l --nocolor --nogroup --hidden'
 
 "" coc.nvim
 let g:coc_user_config = {
