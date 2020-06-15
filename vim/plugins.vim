@@ -6,9 +6,9 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mhinz/vim-signify'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdcommenter'
@@ -20,6 +20,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'vim-syntastic/syntastic'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'yuezk/vim-js'
 
 " Initialize the plugin system.
 call plug#end()
