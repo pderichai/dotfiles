@@ -38,9 +38,11 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
-" Open NERDTree wih "<Leader> + n" with the root set to the current working
-" directory.
-nnoremap <expr> <leader>n g:NERDTree.ExistsForTab() && g:NERDTree.IsOpen() ? ":NERDTreeToggle\<CR>" : ":NERDTreeCWD\<CR>"
+" Open NERDTree wih "<Leader> + n + n" with the root set to the current working
+" directory. "<Leader> + n + f" opens NERDTree with the current file
+" highlighted.
+nnoremap <expr> <leader>nn g:NERDTree.ExistsForTab() && g:NERDTree.IsOpen() ? ":NERDTreeToggle\<CR>" : ":NERDTreeCWD\<CR>"
+nnoremap <expr> <leader>nf g:NERDTree.ExistsForTab() && g:NERDTree.IsOpen() ? ":NERDTreeToggle\<CR>" : ":NERDTreeFind\<CR>"
 
 " Close vim if the only window open is NERDTree.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
