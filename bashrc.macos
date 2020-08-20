@@ -6,6 +6,7 @@ alias ll="ls -lhA"
 alias grep="grep --color=auto"
 alias e="nvim"
 alias godel="ssh-tmux pderichai@godel"
+alias godel-local="ssh-tmux pderichai@godel.local"
 
 # ls colors.
 export CLICOLOR=1
