@@ -62,6 +62,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='gruvbox'
 
 "" FZF
+let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8 }}
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bl :Lines<CR>
