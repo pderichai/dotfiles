@@ -144,6 +144,7 @@ alias e="nvim"
 
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_OPTS='--reverse'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
