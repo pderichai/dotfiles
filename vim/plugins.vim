@@ -66,6 +66,7 @@ let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8 }}
 nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bl :Lines<CR>
+let $FZF_DEFAULT_OPTS = '--reverse'
 let $FZF_DEFAULT_COMMAND = 'ag -l --nocolor --nogroup --hidden'
 
 "" coc.nvim
