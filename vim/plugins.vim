@@ -26,6 +26,9 @@ Plug 'yuezk/vim-js'
 " Initialize the plugin system.
 call plug#end()
 
+" Initialize glaive.
+call glaive#Install()
+
 """ Plugins
 "" NERDTree
 " Close NERDTree after opening a file.
