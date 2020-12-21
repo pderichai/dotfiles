@@ -49,8 +49,8 @@ set updatetime=500
 
 " Set default tab size to 2.
 set tabstop=2
-" Set default shift size set to 2.
 set shiftwidth=2
+set softtabstop=2
 " Use spaces over tabs by default.
 set expandtab
 
