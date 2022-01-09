@@ -5,7 +5,7 @@ Host godel
   ProxyCommand none
 
 Host godel.local
-  Hostname 192.168.1.155
+  Hostname 192.168.1.185
   User pderichai
   IdentitiesOnly yes
   ProxyCommand none
