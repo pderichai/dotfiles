@@ -1,0 +1,11 @@
+Host godel
+  Hostname 71.167.95.13
+  User pderichai
+  IdentitiesOnly yes
+  ProxyCommand none
+
+Host godel.local
+  Hostname 192.168.1.155
+  User pderichai
+  IdentitiesOnly yes
+  ProxyCommand none

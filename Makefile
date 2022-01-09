@@ -10,6 +10,7 @@ googlelinux:
 
 macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
+	@ln -nfs "${pwd}/ssh/config" ~/.ssh/config
 	@if [ ! -d ~/.config/fish  ]; then mkdir -p ~/.config/fish; fi && ln -nfs "${pwd}/config.fish.macos" ~/.config/fish/config.fish
 
 ubuntu: shared
