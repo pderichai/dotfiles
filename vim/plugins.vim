@@ -63,6 +63,12 @@ let g:airline_powerline_fonts = 1
 " Set the color scheme of airline.
 let g:airline_theme='gruvbox'
 
+" Fix the colnr symbol.
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_symbols.colnr = "\u33c7"
+
 "" FZF
 let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8 }}
 nnoremap <Leader>ff :Files<CR>
