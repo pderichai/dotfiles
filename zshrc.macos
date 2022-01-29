@@ -1,0 +1,85 @@
+# Aliases.
+alias ll="ls -lhA"
+alias grep="grep --color=auto"
+alias e="nvim"
+alias godel="ssh-tmux pderichai@godel"
+alias godel-local="ssh-tmux pderichai@godel.local"
+
+# ls colors.
+export CLICOLOR=1
+export LS_COLORS=ExFxBxDxCxegedabagacad
+
+# History settings.
+export HISTFILE=~/.bash_eternal_history
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.
+
+# Function that creates a new tmux session with tmux.
+main() { tmux new-session -A -s ${1:-main}; }
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+## PROMPT ##
+
+# Get current branch in git repo.
+function parse_git_branch {
+  BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+	if [ "${BRANCH}" != "" ]
+	then
+    STAT=$(parse_git_dirty)
+		echo "[${BRANCH}${STAT}]"
+	else
+		echo ""
+	fi
+}
+
+# Get current status of git repo.
+function parse_git_dirty {
+  git_status=$(git status 2>&1 | tee)
+  dirty=$(echo -n "${git_status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?")
+  untracked=$(echo -n "${git_status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?")
+  ahead=$(echo -n "${git_status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?")
+  newfile=$(echo -n "${git_status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?")
+  renamed=$(echo -n "${git_status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?")
+  deleted=$(echo -n "${git_status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?")
+	bits=""
+	if [ "${renamed}" = "0" ]; then
+		bits=">${bits}"
+	fi
+	if [ "${ahead}" = "0" ]; then
+		bits="*${bits}"
+	fi
+	if [ "${newfile}" = "0" ]; then
+		bits="+${bits}"
+	fi
+	if [ "${untracked}" = "0" ]; then
+		bits="?${bits}"
+	fi
+	if [ "${deleted}" = "0" ]; then
+		bits="x${bits}"
+	fi
+	if [ "${dirty}" = "0" ]; then
+		bits="!${bits}"
+	fi
+	if [ ! "${bits}" = "" ]; then
+		echo " ${bits}"
+	else
+		echo ""
+	fi
+}
+
+setopt PROMPT_SUBST
+NEWLINE=$'\n'
+export PROMPT='%F{8}%n%F{8}@%F{15}%m%F{8}:%F{12}%~ %(?..%F{9}[%?] )%F{6}$(parse_git_branch)${NEWLINE}%F{13}>%f '

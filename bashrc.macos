@@ -10,13 +10,12 @@ alias godel-local="ssh-tmux pderichai@godel.local"
 
 # ls colors.
 export CLICOLOR=1
-export LSCOLORS=ExFxBxDxCxegedabagacad
+export LS_COLORS=ExFxBxDxCxegedabagacad
 
 # Undocumented feature which sets the size to "unlimited".
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
 export HISTFILESIZE=
 export HISTSIZE=
-export HISTTIMEFORMAT="[%F %T] "
 
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
@@ -30,7 +29,7 @@ shopt -s histappend
 
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
-PROMPT_COMMAND="history -a; history -n; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Personal bins.
 export PATH="$HOME"/bin:"$PATH"
@@ -41,32 +40,17 @@ main() { tmux new-session -A -s ${1:-main}; }
 # fzf
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/pangd/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/pangd/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/pangd/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/pangd/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 ## PROMPT ##
 # Return exit code if nonzero.
-function nonzero_return() {
+function nonzero_return {
 	RETVAL=$?
 	[ $RETVAL -ne 0 ] && echo "[$RETVAL] "
 }
 
 # Get current branch in git repo.
-function parse_git_branch() {
+function parse_git_branch {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-	if [ ! "${BRANCH}" == "" ]
+	if [ ! "${BRANCH}" = "" ]
 	then
 		STAT=`parse_git_dirty`
 		echo "[${BRANCH}${STAT}]"
@@ -85,25 +69,25 @@ function parse_git_dirty {
 	renamed=`echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?"`
 	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
 	bits=''
-	if [ "${renamed}" == "0" ]; then
+	if [ "${renamed}" = "0" ]; then
 		bits=">${bits}"
 	fi
-	if [ "${ahead}" == "0" ]; then
+	if [ "${ahead}" = "0" ]; then
 		bits="*${bits}"
 	fi
-	if [ "${newfile}" == "0" ]; then
+	if [ "${newfile}" = "0" ]; then
 		bits="+${bits}"
 	fi
-	if [ "${untracked}" == "0" ]; then
+	if [ "${untracked}" = "0" ]; then
 		bits="?${bits}"
 	fi
-	if [ "${deleted}" == "0" ]; then
+	if [ "${deleted}" = "0" ]; then
 		bits="x${bits}"
 	fi
-	if [ "${dirty}" == "0" ]; then
+	if [ "${dirty}" = "0" ]; then
 		bits="!${bits}"
 	fi
-	if [ ! "${bits}" == "" ]; then
+	if [ ! "${bits}" = "" ]; then
 		echo " ${bits}"
 	else
 		echo ""
