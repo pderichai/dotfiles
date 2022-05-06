@@ -32,9 +32,6 @@ set nojoinspaces
 " Always show the sign column (useful for plugins).
 set signcolumn=yes
 
-" Set Python executable.
-let g:python3_host_prog='$HOME/anaconda3/envs/neovim3/bin/python'
-
 " Draw vertical lines at 80 and 100.
 set colorcolumn=80,100
 
