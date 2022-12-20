@@ -8,7 +8,7 @@ Plug 'google/vim-glaive'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mhinz/vim-signify'
