@@ -3,5 +3,4 @@
 	email = pderichai@gmail.com
 [core]
     editor = vim
-[init]
-    templatedir = ~/.git_template
+    sshCommand = "ssh -i ~/.ssh/github-pderichai"

@@ -1,4 +1,0 @@
-Host github.com-pderichai
-     HostName github.com
-     User git
-     IdentityFile ~/.ssh/github-pderichai
