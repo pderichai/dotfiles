@@ -1,7 +1,6 @@
-[user]
-    name = Deric Pang
-    email = pderichai@gmail.com
-[core]
-    editor = vim
-[init]
-    templatedir = ~/.git_template
+[includeIf "gitdir:~/workspace/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dotfiles/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/figma/"]
+  path = ~/.gitconfig-work

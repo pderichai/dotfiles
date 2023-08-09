@@ -2,6 +2,9 @@ pwd := $(shell pwd -LP)
 
 .PHONY: macos ubuntu vim shared
 
+figmamacos: shared
+	cd figma-dotfiles && make macos
+
 googlemacos:
 	cd google-dotfiles && make macos
 
@@ -25,4 +28,5 @@ shared: vim
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
+	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
 	@ln -nfs "${pwd}/git_template" ~/.git_template
