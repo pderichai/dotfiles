@@ -29,7 +29,7 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
 # Function that creates a new tmux session with tmux.
-main() { tmux new-session -A -s ${1:-main}; }
+main() { tmux new-session -A -s ${1:-main} }
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
