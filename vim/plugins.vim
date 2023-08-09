@@ -6,6 +6,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -30,7 +31,8 @@ call plug#end()
 " Initialize glaive.
 call glaive#Install()
 
-""" Plugins
+""" Plugins configs
+
 "" NERDTree
 " Close NERDTree after opening a file.
 let NERDTreeQuitOnOpen = 1
@@ -80,16 +82,37 @@ let $FZF_DEFAULT_OPTS = '--reverse'
 let $FZF_DEFAULT_COMMAND = 'ag -l --nocolor --nogroup --hidden'
 
 "" vim-lsp
+function! s:on_lsp_buffer_enabled() abort
+    setlocal omnifunc=lsp#complete
+    setlocal signcolumn=yes
+    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    nmap <buffer> gd <plug>(lsp-definition)
+    nmap <buffer> gs <plug>(lsp-document-symbol-search)
+    nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+    nmap <buffer> gr <plug>(lsp-references)
+    nmap <buffer> gi <plug>(lsp-implementation)
+    nmap <buffer> gt <plug>(lsp-type-definition)
+    nmap <buffer> <leader>rn <plug>(lsp-rename)
+    nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+    nmap <buffer> K <plug>(lsp-hover)
 
-nnoremap gd   :LspDefinition<CR>  " gd in Normal mode triggers gotodefinition
+    let g:lsp_format_sync_timeout = 1000
+    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 
-" Send async completion requests.
-" WARNING: Might interfere with other completion plugins.
-let g:lsp_async_completion = 1
+    " refer to doc to add more commands
+endfunction
 
-" Enable UI for diagnostics
-let g:lsp_signs_enabled = 1           " enable diagnostics signs in the gutter
-let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
+augroup lsp_install
+    au!
+    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
+    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
 
+let g:lsp_semantic_enabled = 1
+
+"" asyncomplete
 " Automatically show completion options
-let g:asyncomplete_auto_popup = 1
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
