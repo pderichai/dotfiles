@@ -33,7 +33,7 @@ set nojoinspaces
 set signcolumn=yes
 
 " Draw vertical lines at 80 and 100.
-set colorcolumn=80,100
+set colorcolumn=80,100,120
 
 " Highlight the line that the cursor is currently on.
 set cursorline

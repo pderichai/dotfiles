@@ -1,3 +1,6 @@
 [submodule "google-dotfiles"]
 	path = google-dotfiles
 	url = sso://user/pangd/google-dotfiles
+[submodule "figma-dotfiles"]
+	path = figma-dotfiles
+	url = git@github.com:pderichai/figma-dotfiles.git

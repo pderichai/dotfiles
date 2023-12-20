@@ -1,48 +1,27 @@
 {
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-
   "workbench.editor.enablePreview": false,
-
-  "editor.rulers": [80],
-
-  "terminal.integrated.fontFamily": "Source Code Pro",
-
+  "editor.rulers": [80, 100],
   "terminal.integrated.scrollback": 10000,
 
-  "macros": {
-    "openExplorer": [
-      "workbench.action.toggleSidebarVisibility",
-      "workbench.files.action.focusFilesExplorer"
-    ],
-    "openFileInExplorer": [
-      "list.select",
-      "workbench.action.toggleSidebarVisibility"
-    ]
-  },
-
   "vim.leader": "space",
-
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
-
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
-
   "vim.commandLineModeKeyBindingsNonRecursive": [
     {
       "before": ["f", "d"],
       "after": ["<Esc>"]
     }
   ],
-
   "vim.normalModeKeyBindingsNonRecursive": [
     // "Window" settings.
     {
@@ -73,21 +52,36 @@
       "before": ["<leader>", "w", "l"],
       "commands": ["workbench.action.navigateRight"]
     },
-
     // "Buffer" settings.
     {
       "before": ["<leader>", "b", "d"],
       "commands": ["workbench.action.closeActiveEditor"]
     },
-
+    {
+      "before": ["<leader>", "b", "a"],
+      "commands": ["workbench.action.closeAllEditors"]
+    },
     // Sane tab navigation.
     {
-        "before": ["<leader>", "b", "n"],
-        "commands": ["workbench.action.nextEditorInGroup"]
+      "before": ["<leader>", "b", "n"],
+      "commands": ["workbench.action.nextEditorInGroup"]
     },
     {
-        "before": ["<leader>", "b", "p"],
-        "commands": ["workbench.action.previousEditorInGroup"]
+      "before": ["<leader>", "b", "p"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    },
+    // Search for files.
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Search in code.
+    {
+      "before": ["<leader>", "f", "l"],
+      "commands": ["workbench.view.search"]
     }
-  ]
+  ],
+
+  // Python settings.
+  "python.terminal.activateEnvironment": false
 }

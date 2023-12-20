@@ -16,12 +16,12 @@ Plug 'mhinz/vim-signify'
 Plug 'gruvbox-community/gruvbox'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ShowTrailingWhitespace'
-Plug 'vim-syntastic/syntastic'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'yuezk/vim-js'
 
@@ -76,12 +76,23 @@ let g:airline_symbols.colnr = "\u33c7"
 "" FZF
 let g:fzf_layout = { 'window': {'width': 0.8, 'height': 0.8 }}
 nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fl :Ag<CR>
 nnoremap <Leader>bb :Buffers<CR>
 nnoremap <Leader>bl :Lines<CR>
 let $FZF_DEFAULT_OPTS = '--reverse'
-let $FZF_DEFAULT_COMMAND = 'ag -l --nocolor --nogroup --hidden'
+let $FZF_DEFAULT_COMMAND = 'ag -l'
 
 "" vim-lsp
+let g:lsp_settings = {
+\   'pylsp-all': {
+\     'workspace_config': {
+\       'pylsp': {
+\         'configurationSources': ['flake8']
+\       }
+\     }
+\   },
+\}
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
