@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader><space>", "<cmd>nohlsearch<cr>", { desc = "Clear se
 -- Buffer commands.
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<leader>ba", "<cmd>bufdo bd<cr>bd<cr>", { desc = "Prev buffer" })
 
 -- Window commands.
 vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window" })
