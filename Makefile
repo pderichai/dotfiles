@@ -1,6 +1,6 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: macos ubuntu vim shared
+.PHONY: macos ubuntu vim nvim shared
 
 figmamacos: shared
 	cd figma-dotfiles && make macos
@@ -25,10 +25,15 @@ ubuntu: shared
 vim:
 	cd vim && make link
 
-shared: vim
+nvim:
+	cd nvim && make link
+
+
+shared: vim nvim
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
 	@ln -nfs "${pwd}/git_template" ~/.git_template
+	@ln -nfs "${pwd}/alacritty" ~/.config/alacritty
 	@if [ ! -d ~/.config/ranger ]; then mkdir -p ~/.config/ranger; fi && ln -nfs "${pwd}/rc.config" ~/.config/ranger/rc.conf
