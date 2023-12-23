@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.opt.colorcolumn = "80,100,120"
+vim.g.autoformat = false

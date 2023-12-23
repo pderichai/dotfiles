@@ -4,6 +4,9 @@
 
 local functions = require("config.functions")
 
+-- " Use "fd" to exit insert.
+vim.keymap.set("i", "fd", "<esc>")
+
 -- Clear search results quickly.
 vim.keymap.set("n", "<leader><space>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlights" })
 
