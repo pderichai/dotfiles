@@ -4,17 +4,13 @@
 
 local functions = require("config.functions")
 
--- " Use "fd" to exit insert, eX, and command modes.
-vim.keymap.set({ "i", "x" }, "fd", "<esc>")
-vim.keymap.set("c", "fd", "<c-c>")
-
 -- Clear search results quickly.
 vim.keymap.set("n", "<leader><space>", "<cmd>nohlsearch<cr>", { desc = "Clear search highlights" })
 
 -- Buffer commands.
 vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<leader>ba", "<cmd>bufdo bd<cr>bd<cr>", { desc = "Prev buffer" })
+vim.keymap.set("n", "<leader>ba", "<cmd>bufdo bd<cr>bd<cr>", { desc = "Delete all buffers" })
 
 -- Window commands.
 vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window" })
