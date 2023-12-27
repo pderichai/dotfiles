@@ -4,3 +4,5 @@
 [core]
     editor = vim
     sshCommand = "ssh -i ~/.ssh/github-pderichai"
+[push]
+    autoSetupRemote = true
