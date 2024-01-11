@@ -4,3 +4,7 @@
   path = ~/.gitconfig-personal
 [includeIf "gitdir:~/figma/"]
   path = ~/.gitconfig-work
+[pager]
+	branch = false
+[push]
+    autoSetupRemote = true

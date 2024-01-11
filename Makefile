@@ -12,8 +12,6 @@ googlelinux:
 	cd google-dotfiles && make linux
 
 macos: shared
-	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
-	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 	# Removed ssh config for now.
 	# @ln -nfs "${pwd}/ssh/config" ~/.ssh/config
 	@if [ ! -d ~/.config/fish ]; then mkdir -p ~/.config/fish; fi && ln -nfs "${pwd}/config.fish.macos" ~/.config/fish/config.fish
@@ -31,6 +29,8 @@ nvim:
 
 shared: vim nvim
 	@ln -nfs "${pwd}/bin" ~/bin
+	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
+	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal

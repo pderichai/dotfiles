@@ -1,0 +1,1 @@
+../figma-dotfiles/figma-macos.zsh

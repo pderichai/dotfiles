@@ -28,5 +28,6 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-# Function that creates a new tmux session with tmux.
+# Function that creates a new tmux session named `main` or attaches to the
+# `main` session if it exists.
 main() { tmux new-session -A -s ${1:-main} }
