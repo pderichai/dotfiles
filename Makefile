@@ -1,8 +1,8 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: macos ubuntu vim nvim shared
+.PHONY: macos ubuntu vim nvim git shared
 
-figmamacos: shared
+figmamacos: shared git
 	@ln -nfs "${pwd}/alacritty" ~/.config/alacritty
 	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
@@ -33,11 +33,13 @@ vim:
 nvim:
 	cd nvim && make link
 
+git:
+	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
+	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
+	@ln -nfs "${pwd}/git_template" ~/.git_template
+
 
 shared: vim nvim
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
-	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
-	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
-	@ln -nfs "${pwd}/git_template" ~/.git_template
 	@if [ ! -d ~/.config/ranger ]; then mkdir -p ~/.config/ranger; fi && ln -nfs "${pwd}/rc.config" ~/.config/ranger/rc.conf
