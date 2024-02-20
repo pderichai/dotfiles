@@ -5,3 +5,4 @@
 vim.opt.colorcolumn = "80,100,120"
 vim.g.autoformat = false
 vim.g.root_spec = { "cwd" }
+vim.opt.relativenumber = false

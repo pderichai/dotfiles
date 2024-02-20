@@ -83,5 +83,6 @@
   ],
 
   // Python settings.
-  "python.terminal.activateEnvironment": false
+  "python.terminal.activateEnvironment": false,
+  "githubPullRequests.pullBranch": "never"
 }
