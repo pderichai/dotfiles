@@ -9,6 +9,7 @@ figmamacos: shared git
 	cd figma-dotfiles && make macos
 
 figmalinux: shared
+	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
 	cd figma-dotfiles && make linux
 
 googlemacos:
