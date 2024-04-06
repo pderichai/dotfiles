@@ -33,7 +33,7 @@
       "commands": ["workbench.action.splitEditorOrthogonal"]
     },
     {
-      "before": ["<leader>", "w", "c"],
+      "before": ["<leader>", "w", "d"],
       "commands": ["workbench.action.closeEditorsInGroup"]
     },
     {
