@@ -19,8 +19,6 @@ googlelinux:
 	cd google-dotfiles && make linux
 
 macos: shared
-	# Removed ssh config for now.
-	# @ln -nfs "${pwd}/ssh/config" ~/.ssh/config
 	@ln -nfs "${pwd}/alacritty" ~/.config/alacritty
 	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
@@ -37,10 +35,9 @@ nvim:
 git:
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
-	@ln -nfs "${pwd}/git_template" ~/.git_template
 
 
-shared: vim nvim
+shared: vim nvim git
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@if [ ! -d ~/.config/ranger ]; then mkdir -p ~/.config/ranger; fi && ln -nfs "${pwd}/rc.config" ~/.config/ranger/rc.conf

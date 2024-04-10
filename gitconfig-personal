@@ -1,6 +1,6 @@
 [user]
-	name = Deric Pang
-	email = pderichai@gmail.com
+  name = Deric Pang
+  email = pderichai@gmail.com
 [core]
-    editor = vim
-    sshCommand = "ssh -i ~/.ssh/github-pderichai"
+  editor = nvim
+  sshCommand = "ssh -i ~/.ssh/github-pderichai"
