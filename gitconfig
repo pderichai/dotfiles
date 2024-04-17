@@ -1,9 +1,9 @@
-[includeIf "gitdir:~/workspace/"]
-  path = ~/.gitconfig-personal
-[includeIf "gitdir:~/dotfiles/"]
-  path = ~/.gitconfig-personal
-[includeIf "gitdir:~/figma/"]
-  path = ~/.gitconfig-work
+[user]
+  name = Deric Pang
+  email = pderichai@gmail.com
+[core]
+  editor = nvim
+  sshCommand = "ssh -i ~/.ssh/github-pderichai"
 [pager]
 	branch = false
 [push]

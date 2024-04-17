@@ -34,7 +34,6 @@ nvim:
 
 git:
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
-	@ln -nfs "${pwd}/gitconfig-personal" ~/.gitconfig-personal
 
 
 shared: vim nvim git
