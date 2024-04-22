@@ -17,7 +17,6 @@ return {
   },
   keys = {
     { "<leader><space>", false },
-    { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)" },
     {
       "<leader>sG",
       '<cmd>lua require("telescope").extensions.live_grep_args.live_grep_args()<cr>',
