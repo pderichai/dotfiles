@@ -63,7 +63,7 @@ ZSH_THEME="deric"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/dotfiles/ohmyzsh-custom-macos
+ZSH_CUSTOM=~/dotfiles/ohmyzsh-custom-ubuntu
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/

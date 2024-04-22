@@ -24,6 +24,7 @@ macos: shared
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 
 ubuntu: shared
+	@ln -nfs "${pwd}/zshrc.ubuntu" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
 
 vim:
