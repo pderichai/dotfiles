@@ -10,6 +10,7 @@ export CLICOLOR=1
 export LSCOLORS=ExExExExExEgedabagacad
 zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
 
+export PATH=$HOME/bin:$PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # History settings.
