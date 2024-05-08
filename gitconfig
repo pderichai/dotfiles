@@ -3,7 +3,6 @@
   email = pderichai@gmail.com
 [core]
   editor = nvim
-  sshCommand = "ssh -i ~/.ssh/github-pderichai"
 [pager]
 	branch = false
 [push]
