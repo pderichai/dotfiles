@@ -2,7 +2,7 @@ pwd := $(shell pwd -LP)
 
 .PHONY: macos ubuntu vim nvim git shared
 
-figmamacos: shared git
+figmamacos: shared
 	@ln -nfs "${pwd}/alacritty" ~/.config/alacritty
 	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
