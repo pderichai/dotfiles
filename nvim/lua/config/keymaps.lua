@@ -24,5 +24,3 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to right window" })
 -- Find and replace.
 vim.keymap.set("n", "<leader>r", functions.replace_text_confirm, { desc = "Replace cursor text" })
 vim.keymap.set("n", "<leader>R", functions.replace_text, { desc = "Replace cursor text (no conf)" })
-vim.keymap.set("v", "<leader>r", functions.replace_highlighted_text_confirm, { desc = "Replace cursor text" })
-vim.keymap.set("v", "<leader>R", functions.replace_highlighted_text, { desc = "Replace cursor text (no conf)" })
