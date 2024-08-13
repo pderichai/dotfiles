@@ -2,8 +2,6 @@
 alias ll="ls -lhA"
 alias grep="grep --color=auto"
 alias e="nvim"
-alias godel="ssh-tmux pderichai@godel"
-alias godel-local="ssh-tmux pderichai@godel.local"
 
 # ls colors.
 export CLICOLOR=1
@@ -11,10 +9,7 @@ export LSCOLORS=ExExExExExEgedabagacad
 zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
 
 export PATH=$HOME/bin:$PATH
-export PATH=/usr/local/cuda-12.4/bin:$PATH
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # History settings.
 export HISTFILE=~/.bash_eternal_history

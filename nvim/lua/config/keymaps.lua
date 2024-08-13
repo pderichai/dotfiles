@@ -20,6 +20,8 @@ vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window" })
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Go to upper window" })
 vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to right window" })
+vim.keymap.set("n", "<leader>w-", "<cmd>split<cr>", { desc = "Split window horizontally" })
+vim.keymap.set("n", "<leader>w<bar>", "<cmd>vsplit<cr>", { desc = "Split window vertically" })
 
 -- Find and replace.
 vim.keymap.set("n", "<leader>r", functions.replace_text_confirm, { desc = "Replace cursor text" })
