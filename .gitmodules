@@ -3,4 +3,4 @@
 	url = sso://user/pangd/google-dotfiles
 [submodule "figma-dotfiles"]
 	path = figma-dotfiles
-	url = git@github.com:pderichai/figma-dotfiles.git
+	url = git@github.com:dpangfigma/dotfiles.git
