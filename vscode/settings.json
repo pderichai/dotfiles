@@ -3,6 +3,33 @@
   "editor.rulers": [80, 100],
   "terminal.integrated.scrollback": 10000,
 
+  "terminal.integrated.profiles.osx": {
+    "main": {
+      "path": "tmux",
+      "args": [
+        "new-session",
+        "-A",
+        "-s",
+        "main"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "main",
+
+  "terminal.integrated.profiles.linux": {
+    "main": {
+      "path": "tmux",
+      "args": [
+        "new-session",
+        "-A",
+        "-s",
+        "main"
+      ]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "main",
+
+  "vim.useSystemClipboard": true,
   "vim.leader": "space",
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -80,9 +107,5 @@
       "before": ["<leader>", "f", "l"],
       "commands": ["workbench.view.search"]
     }
-  ],
-
-  // Python settings.
-  "python.terminal.activateEnvironment": false,
-  "githubPullRequests.pullBranch": "never"
+  ]
 }

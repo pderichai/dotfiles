@@ -1,61 +1,5 @@
 // Place your key bindings in this file to override the defaults
 [
-  // Search for files.
-  {
-    "key": "space f f",
-    "command": "workbench.action.quickOpen",
-    "when": "!inputFocus"
-  },
-  // Search in code.
-  {
-    "key": "space f l",
-    "command": "workbench.view.search",
-    "when": "!inputFocus"
-  },
-
-  // Set ctrl+g to "close" things.
-  {
-    "key": "ctrl+g",
-    "command": "extension.vim_escape",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "workbench.action.closeQuickOpen",
-    "when": "inQuickOpen"
-  },
-
-  // Terminal keybindings.
-  {
-    "key": "ctrl+b l",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+b h",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+b shift+\\",
-    "command": "workbench.action.terminal.split",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+b c",
-    "command": "workbench.action.terminal.new"
-  },
-  {
-    "key": "ctrl+b n",
-    "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+b p",
-    "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
-  },
-
   // Configure quick open.
   {
     "key": "ctrl+j",
@@ -70,33 +14,5 @@
   {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpen"
-  },
-
-  // Emulating NERDTree.
-  {
-    "key": "ctrl+n ctrl+n",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
-  {
-    "key": "ctrl+n ctrl+f",
-    "command": "workbench.files.action.showActiveFileInExplorer"
-  },
-  {
-    "key": "ctrl+n ctrl+n",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "enter",
-    "command": "runCommands",
-    "args": {
-      "commands": ["list.select", "workbench.action.toggleSidebarVisibility"]
-    },
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "ctrl+r",
-    "command": "renameFile",
-    "when": "explorerViewletFocus"
   }
 ]
