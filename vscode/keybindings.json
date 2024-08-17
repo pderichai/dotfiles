@@ -1,6 +1,4 @@
-// Place your key bindings in this file to override the defaults
 [
-  // Configure quick open.
   {
     "key": "ctrl+j",
     "command": "workbench.action.quickOpenSelectNext",
@@ -19,5 +17,15 @@
     "key": "ctrl+c",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion"
   }
 ]
