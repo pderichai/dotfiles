@@ -1,5 +1,6 @@
 {
   "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "editor.rulers": [80, 100],
   "terminal.integrated.scrollback": 10000,
 
