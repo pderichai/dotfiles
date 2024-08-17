@@ -34,11 +34,14 @@ vim:
 nvim:
 	cd nvim && make link
 
+vscode:
+	@ln -nfs "${pwd}/vscode/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+	@ln -nfs "${pwd}/vscode/keybindings.json" ~/Library/Application\ Support/Code/User/keybindings.json
+
 git:
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 
-
-shared: vim nvim git
+shared: vim nvim git vscode
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@if [ ! -d ~/.config/ranger ]; then mkdir -p ~/.config/ranger; fi && ln -nfs "${pwd}/rc.config" ~/.config/ranger/rc.conf
