@@ -14,5 +14,10 @@
   {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!terminalFocus"
   }
 ]

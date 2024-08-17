@@ -5,30 +5,30 @@
   "terminal.integrated.scrollback": 10000,
 
   "terminal.integrated.profiles.osx": {
-    "main": {
+    "tmux": {
       "path": "tmux",
       "args": [
         "new-session",
         "-A",
         "-s",
-        "main"
+        "vscode-${workspaceFolderBasename}"
       ]
     }
   },
-  "terminal.integrated.defaultProfile.osx": "main",
+  "terminal.integrated.defaultProfile.osx": "tmux",
 
   "terminal.integrated.profiles.linux": {
-    "main": {
+    "tmux": {
       "path": "tmux",
       "args": [
         "new-session",
         "-A",
         "-s",
-        "main"
+        "vscode-${workspaceFolderBasename}"
       ]
     }
   },
-  "terminal.integrated.defaultProfile.linux": "main",
+  "terminal.integrated.defaultProfile.linux": "tmux",
 
   "vim.useSystemClipboard": true,
   "vim.leader": "space",
@@ -87,9 +87,9 @@
     },
     {
       "before": ["<leader>", "b", "a"],
-      "commands": ["workbench.action.closeAllEditors"]
+      "commands": ["workbench.action.closeAllEditors", "workbench.action.quickOpen"]
     },
-    // Sane tab navigation.
+    // Tab navigation.
     {
       "before": ["<leader>", "b", "n"],
       "commands": ["workbench.action.nextEditorInGroup"]
@@ -98,15 +98,5 @@
       "before": ["<leader>", "b", "p"],
       "commands": ["workbench.action.previousEditorInGroup"]
     },
-    // Search for files.
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"]
-    },
-    // Search in code.
-    {
-      "before": ["<leader>", "f", "l"],
-      "commands": ["workbench.view.search"]
-    }
   ]
 }
