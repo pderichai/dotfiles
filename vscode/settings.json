@@ -1,9 +1,11 @@
 {
   "workbench.editor.enablePreview": false,
   "workbench.colorTheme": "Gruvbox Dark Hard",
-  "editor.rulers": [80, 100],
-  "terminal.integrated.scrollback": 10000,
 
+  "editor.rulers": [80, 100],
+  "editor.fontSize": 14,
+
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.profiles.osx": {
     "tmux": {
       "path": "tmux",
