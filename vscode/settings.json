@@ -1,106 +1,192 @@
 {
-  "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Gruvbox Dark Hard",
-
   "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.rulers": [80, 100, 120],
   "editor.fontSize": 14,
-
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "remote.SSH.defaultExtensions": [
+    "BazelBuild.vscode-bazel",
+    "eamodio.gitlens",
+    "GitHub.copilot",
+    "ms-python.python"
+  ],
+  "terminal.integrated.defaultProfile.linux": "tmux",
+  "terminal.integrated.defaultProfile.osx": "tmux",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.profiles.osx": {
-    "tmux": {
-      "path": "tmux",
-      "args": [
-        "new-session",
-        "-A",
-        "-s",
-        "vscode-${workspaceFolderBasename}"
-      ]
-    }
-  },
-  "terminal.integrated.defaultProfile.osx": "tmux",
-
   "terminal.integrated.profiles.linux": {
     "tmux": {
-      "path": "tmux",
       "args": [
         "new-session",
         "-A",
         "-s",
         "vscode-${workspaceFolderBasename}"
-      ]
+      ],
+      "path": "tmux"
     }
   },
-  "terminal.integrated.defaultProfile.linux": "tmux",
-
-  "vim.useSystemClipboard": true,
-  "vim.leader": "space",
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
+  "terminal.integrated.profiles.osx": {
+    "tmux": {
+      "args": [
+        "new-session",
+        "-A",
+        "-s",
+        "vscode-${workspaceFolderBasename}"
+      ],
+      "path": "tmux"
     }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
-    }
-  ],
+  },
   "vim.commandLineModeKeyBindingsNonRecursive": [
     {
-      "before": ["f", "d"],
-      "after": ["<Esc>"]
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
     }
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
+    }
+  ],
+  "vim.leader": "space",
   "vim.normalModeKeyBindingsNonRecursive": [
-    // "Window" settings.
     {
-      "before": ["<leader>", "w", "|"],
-      "commands": ["workbench.action.splitEditor"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "|"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
     },
     {
-      "before": ["<leader>", "w", "-"],
-      "commands": ["workbench.action.splitEditorOrthogonal"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorOrthogonal"
+      ]
     },
     {
-      "before": ["<leader>", "w", "d"],
-      "commands": ["workbench.action.closeEditorsInGroup"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
     },
     {
-      "before": ["<leader>", "w", "h"],
-      "commands": ["workbench.action.navigateLeft"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
     },
     {
-      "before": ["<leader>", "w", "j"],
-      "commands": ["workbench.action.navigateDown"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.navigateDown"
+      ]
     },
     {
-      "before": ["<leader>", "w", "k"],
-      "commands": ["workbench.action.navigateUp"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.navigateUp"
+      ]
     },
     {
-      "before": ["<leader>", "w", "l"],
-      "commands": ["workbench.action.navigateRight"]
-    },
-    // "Buffer" settings.
-    {
-      "before": ["<leader>", "b", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "b", "a"],
-      "commands": ["workbench.action.closeAllEditors", "workbench.action.quickOpen"]
-    },
-    // Tab navigation.
-    {
-      "before": ["<leader>", "b", "n"],
-      "commands": ["workbench.action.nextEditorInGroup"]
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
     },
     {
-      "before": ["<leader>", "b", "p"],
-      "commands": ["workbench.action.previousEditorInGroup"]
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
-  ]
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.closeAllEditors",
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
+    }
+  ],
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none"
 }
