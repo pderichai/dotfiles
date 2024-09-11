@@ -12,8 +12,8 @@
     "GitHub.copilot",
     "ms-python.python"
   ],
-  "terminal.integrated.defaultProfile.linux": "tmux",
-  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.profiles.linux": {
