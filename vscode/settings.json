@@ -9,8 +9,8 @@
   "remote.SSH.defaultExtensions": [
     "BazelBuild.vscode-bazel",
     "eamodio.gitlens",
-    "GitHub.copilot",
-    "ms-python.python"
+    "ms-python.python",
+    "Github.copilot"
   ],
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
@@ -151,6 +151,26 @@
       "commands": [
         "workbench.action.closeAllEditors",
         "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "B",
+        "B"
+      ],
+      "commands": [
+        "workbench.action.openNextRecentlyUsedEditorInGroup"
       ]
     },
     {
