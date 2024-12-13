@@ -9,7 +9,6 @@ export LSCOLORS=ExExExExExEgedabagacad
 zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
 
 export PATH=$HOME/bin:$PATH
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # History settings.
 export HISTFILE=~/.bash_eternal_history
