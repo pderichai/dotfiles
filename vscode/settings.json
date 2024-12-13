@@ -6,12 +6,14 @@
     100,
     120
   ],
+  "githubPullRequests.pullBranch": "never",
   "remote.SSH.defaultExtensions": [
     "BazelBuild.vscode-bazel",
     "eamodio.gitlens",
     "ms-python.python",
     "Github.copilot"
   ],
+  "remote.autoForwardPortsSource": "hybrid",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",

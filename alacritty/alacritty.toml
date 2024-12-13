@@ -1,6 +1,3 @@
-import = [
-    "~/.config/alacritty/gruvbox_dark.toml"
-]
 
 [window]
 dynamic_padding = true
@@ -16,4 +13,9 @@ size = 16.0
 [keyboard]
 bindings = [
   { key = "M", mods = "Command|Control", action = "ToggleMaximized" }
+]
+
+[general]
+import = [
+    "~/.config/alacritty/gruvbox_dark.toml"
 ]
