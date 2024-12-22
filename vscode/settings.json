@@ -6,40 +6,11 @@
     100,
     120
   ],
-  "githubPullRequests.pullBranch": "never",
-  "remote.SSH.defaultExtensions": [
-    "BazelBuild.vscode-bazel",
-    "eamodio.gitlens",
-    "ms-python.python",
-    "Github.copilot"
-  ],
   "remote.autoForwardPortsSource": "hybrid",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.profiles.linux": {
-    "tmux": {
-      "args": [
-        "new-session",
-        "-A",
-        "-s",
-        "vscode-${workspaceFolderBasename}"
-      ],
-      "path": "tmux"
-    }
-  },
-  "terminal.integrated.profiles.osx": {
-    "tmux": {
-      "args": [
-        "new-session",
-        "-A",
-        "-s",
-        "vscode-${workspaceFolderBasename}"
-      ],
-      "path": "tmux"
-    }
-  },
   "vim.commandLineModeKeyBindingsNonRecursive": [
     {
       "after": [
@@ -194,6 +165,15 @@
       "commands": [
         "workbench.action.previousEditorInGroup"
       ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
     }
   ],
   "vim.useSystemClipboard": true,
@@ -210,5 +190,11 @@
   ],
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }

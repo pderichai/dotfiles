@@ -11,7 +11,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LSCOLORS}
 export PATH=$HOME/bin:$PATH
 
 # History settings.
-export HISTFILE=~/.bash_eternal_history
+export HISTFILE=/commandhistory/bash_eternal_history
 export HISTSIZE=1000000000       # Load most recent 1,000,000,000 lines
 export SAVEHIST=1000000000       # Save most recent 1,000,000,000 lines
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
