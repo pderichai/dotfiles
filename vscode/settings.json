@@ -1,10 +1,30 @@
 {
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 14,
   "editor.rulers": [
     80,
     100,
     120
+  ],
+  "flake8.args": [
+    "--config",
+    "ml/py/setup.cfg"
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
+  "githubPullRequests.pullBranch": "never",
+  "remote.SSH.defaultExtensions": [
+    "BazelBuild.vscode-bazel",
+    "eamodio.gitlens",
+    "ms-python.python",
+    "Github.copilot"
   ],
   "remote.autoForwardPortsSource": "hybrid",
   "terminal.integrated.defaultProfile.linux": "zsh",
@@ -190,11 +210,5 @@
   ],
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "none",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  }
+  "workbench.startupEditor": "none"
 }
