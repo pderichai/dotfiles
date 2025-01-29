@@ -19,12 +19,12 @@ googlemacos:
 googlelinux:
 	cd google-dotfiles && make linux
 
-macos: shared
+macos: shared git
 	@ln -nfs "${pwd}/alacritty" ~/.config/alacritty
 	@ln -nfs "${pwd}/zshrc.macos" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.macos" ~/.bashrc
 
-ubuntu: shared
+ubuntu: shared git
 	@ln -nfs "${pwd}/zshrc.ubuntu" ~/.zshrc
 	@ln -nfs "${pwd}/bashrc.ubuntu" ~/.bashrc
 
@@ -41,7 +41,7 @@ vscode:
 git:
 	@ln -nfs "${pwd}/gitconfig" ~/.gitconfig
 
-shared: vim nvim git vscode
+shared: vim nvim vscode
 	@ln -nfs "${pwd}/bin" ~/bin
 	@ln -nfs "${pwd}/tmux.conf" ~/.tmux.conf
 	@if [ ! -d ~/.config/ranger ]; then mkdir -p ~/.config/ranger; fi && ln -nfs "${pwd}/rc.config" ~/.config/ranger/rc.conf
