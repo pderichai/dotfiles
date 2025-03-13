@@ -13,6 +13,7 @@
     "--config",
     "ml/py/setup.cfg"
   ],
+  "git.blame.editorDecoration.enabled": false,
   "github.copilot.enable": {
     "*": true,
     "markdown": false,
@@ -20,6 +21,7 @@
     "scminput": false
   },
   "githubPullRequests.pullBranch": "never",
+  "python.defaultInterpreterPath": "~/figma/figma/ml/py/.dev_venv/bin/python",
   "remote.SSH.defaultExtensions": [
     "BazelBuild.vscode-bazel",
     "eamodio.gitlens",
