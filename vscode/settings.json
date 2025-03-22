@@ -13,7 +13,7 @@
     "--config",
     "ml/py/setup.cfg"
   ],
-  "git.blame.editorDecoration.enabled": false,
+  "git.blame.editorDecoration.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": false,
