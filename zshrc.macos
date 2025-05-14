@@ -105,3 +105,7 @@ eval "$(rbenv init -)"
 export RACK_ENV=development
 export AWS_CONFIG_FILE="$HOME/figma/figma/config/aws/sso_config"
 export FIGMA_SSO_ROLES_FILE="$HOME/figma/figma/config/aws/sso_roles.yaml"
+alias claude="CLAUDE_CODE_USE_BEDROCK=1 ANTHROPIC_MODEL='us.anthropic.claude-3-7-sonnet-20250219-v1:0' DISABLE_PROMPT_CACHING=1 access aws exec dev-bedrock-access -- claude"
+eval "$(mise activate zsh)"
+export MISE_ENV=macos # loads mise.macos.toml
+export MISE_TRUSTED_CONFIG_PATHS="$HOME/figma/figma"
