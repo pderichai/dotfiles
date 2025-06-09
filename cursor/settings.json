@@ -1,7 +1,4 @@
 {
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 14,
   "editor.rulers": [
@@ -9,26 +6,8 @@
     100,
     120
   ],
-  "flake8.args": [
-    "--config",
-    "ml/py/setup.cfg"
-  ],
   "git.blame.editorDecoration.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": false,
-    "plaintext": false,
-    "scminput": false
-  },
   "githubPullRequests.pullBranch": "never",
-  "python.defaultInterpreterPath": "~/figma/figma/ml/py/.dev_venv/bin/python",
-  "remote.SSH.defaultExtensions": [
-    "BazelBuild.vscode-bazel",
-    "eamodio.gitlens",
-    "ms-python.python",
-    "Github.copilot"
-  ],
-  "remote.autoForwardPortsSource": "hybrid",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
