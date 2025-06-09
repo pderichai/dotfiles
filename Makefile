@@ -1,6 +1,6 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: macos ubuntu vim nvim git shared
+.PHONY: macos ubuntu vim nvim git shared vscode cursor
 
 figmamacos: shared
 	@ln -nfs "${pwd}/alacritty" "$(HOME)/.config/alacritty"
