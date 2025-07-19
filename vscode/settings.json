@@ -1,0 +1,195 @@
+{
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14,
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "git.blame.editorDecoration.enabled": true,
+  "githubPullRequests.pullBranch": "never",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.fontSize": 14,
+  "vim.commandLineModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
+    }
+  ],
+  "vim.leader": "space",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "|"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "-"
+      ],
+      "commands": [
+        "workbench.action.splitEditorOrthogonal"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.navigateLeft"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.navigateDown"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "k"
+      ],
+      "commands": [
+        "workbench.action.navigateUp"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "w",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.navigateRight"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "d"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "a"
+      ],
+      "commands": [
+        "workbench.action.closeAllEditors",
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "b"
+      ],
+      "commands": [
+        "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "B",
+        "B"
+      ],
+      "commands": [
+        "workbench.action.openNextRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "n"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "\u003cleader\u003e",
+        "b",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "\u003cEsc\u003e"
+      ],
+      "before": [
+        "f",
+        "d"
+      ]
+    }
+  ],
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none"
+}
