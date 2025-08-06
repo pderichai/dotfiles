@@ -1,6 +1,6 @@
 pwd := $(shell pwd -LP)
 
-.PHONY: macos ubuntu vim nvim git shared vscode cursor
+.PHONY: macos ubuntu vim nvim git shared vscode
 
 figmamacos: shared
 	@ln -nfs "${pwd}/alacritty" "$(HOME)/.config/alacritty"
@@ -37,10 +37,6 @@ nvim:
 vscode:
 	@ln -nfs "${pwd}/vscode/settings.json" "$(HOME)/Library/Application Support/Code/User/settings.json"
 	@ln -nfs "${pwd}/vscode/keybindings.json" "$(HOME)/Library/Application Support/Code/User/keybindings.json"
-
-cursor:
-	@ln -nfs "${pwd}/cursor/settings.json" "$(HOME)/Library/Application Support/Cursor/User/settings.json"
-	@ln -nfs "${pwd}/cursor/keybindings.json" "$(HOME)/Library/Application Support/Cursor/User/keybindings.json"
 
 git:
 	@ln -nfs "${pwd}/gitconfig" "$(HOME)/.gitconfig"
