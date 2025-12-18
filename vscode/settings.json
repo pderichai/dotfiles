@@ -191,5 +191,6 @@
   ],
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "python.analysis.typeCheckingMode": "strict"
 }
